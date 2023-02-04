@@ -1,0 +1,11 @@
+{
+    "Hero": {
+        "title": "Ensino Básico, Secundário e Superior.",
+        "subtitle": "Alcance o sucesso com as nossas explicações! Esclareça as suas dúvidas e aprofunde os seus conhecimentos.",
+        "img": "hero_tutoring.png",
+        "noButton": false,
+        "singleButton": true,
+        "firstButton": "Inscreva-se!",
+        "secondButton": ""
+    }
+}

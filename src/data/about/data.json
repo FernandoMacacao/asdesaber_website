@@ -1,0 +1,11 @@
+{
+    "Hero": {
+        "title": "Explicações e Formação.",
+        "subtitle": "Impulsionar indivíduos e organizações a trilharem caminhos de sucesso é a razão que dá sentido à nossa existência enquanto entidade.",
+        "img": "hero_about.png",
+        "noButton": true,
+        "singleButton": false,
+        "firstButton": "",
+        "secondButton": ""
+    }
+}

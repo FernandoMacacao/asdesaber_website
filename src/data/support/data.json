@@ -1,0 +1,11 @@
+{
+    "Hero": {
+        "title": "Psicologia ao Serviço do Êxito Escolar.",
+        "subtitle": "Transforme o sucesso em realidade com o nosso apoio! Explore o seu potencial, supere obstáculos e conquiste felicidade.",
+        "img": "hero_support.png",
+        "noButton": false,
+        "singleButton": true,
+        "firstButton": "Inscreva-se!",
+        "secondButton": ""
+    }
+}

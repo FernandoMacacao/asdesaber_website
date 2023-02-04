@@ -1,0 +1,11 @@
+{
+    "Hero": {
+        "title": "Pensar. Aprender. Formar.",
+        "subtitle": "Desperte o seu potencial e alcance novos patamares de sucesso. Junte-se a nós para um futuro brilhante.",
+        "img": "hero_home.png",
+        "noButton": false,
+        "singleButton": false,
+        "firstButton": "Inscreva-se!",
+        "secondButton": "Saiba Mais"
+    }
+}
