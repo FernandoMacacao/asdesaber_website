@@ -12,8 +12,13 @@ export const theme = createTheme({
         },
         // orange color
         secondary: {
-            main: '#fE860c',
+            main: '#fe860c',
             contrastText: '#f5f5f5'
+        },
+        info: {
+            main: '#f5f5f5',
+            dark: '#d1d1d1',
+            contrastText: '#fe860c'
         },
         // black and orange colors for text
         text: {
@@ -41,7 +46,15 @@ export const theme = createTheme({
             fontFamily: "Montserrat"
         },
         h5: {
-            fontFamily: "Lato"
+            fontFamily: "Lato",
+            fontSize: '1.5rem',
+            fontWeight: 700
+        },
+        h6: {
+            fontFamily: "Montserrat",
+            textTransform: "uppercase",
+            fontSize: '1.125rem',
+            fontWeight: 700
         },
         // Body text
         body1: {
@@ -61,6 +74,16 @@ export const theme = createTheme({
                 root: {
                     fontFamily: "Mulish",
                     textTransform: "none"
+                },
+                textInfo: {
+                    backgroundColor: 'red'
+                }
+            }
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 10
                 }
             }
         }

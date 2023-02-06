@@ -7,5 +7,23 @@
         "singleButton": false,
         "firstButton": "Inscreva-se!",
         "secondButton": "Saiba Mais"
+    },
+    "Section1": {
+        "title": "Explicações",
+        "subtitle": "Explicações individuais, estudo acompanhado e preparação para os exames", 
+        "text": "As explicações pretendem ser um suporte complementar à frequência das aulas curriculares. Atendendo às caracteristicas do aluno e do seu percurso académico oferecemos a modalidade de explicação que melhor se adapta às suas vontades e necessidades. Esta versatilidade e excelência no serviço faz de nós o seu parceiro ideal e juntos faremos do seu sucesso o nosso maior orgulho.", 
+        "img": "tutoring_section.png",
+        "buttonWhite": true, 
+        "imageFirst": true, 
+        "backgroundBlue": true
+    }, 
+    "Section2": {
+        "title": "Apoio Psicopedagógico",
+        "subtitle": "Psicologia ao serviço do êxito escolar", 
+        "text": "Oferecemos apoio psicopedagógico com o objetivo de ajudar na tomada de decisão, na descoberta de interesses e características pessoais e no sucesso escolar. Temos parcerias especializadas com programas de Psicologia e Psicomotricidade e Orientação Vocacional. Pretendemos educar pela positiva, visando o desenvolvimento pessoal e a felicidade dos alunos, pais e educadores.", 
+        "img": "support_section.png",
+        "buttonWhite": false, 
+        "imageFirst": false, 
+        "backgroundBlue": false
     }
 }

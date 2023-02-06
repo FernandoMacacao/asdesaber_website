@@ -13,7 +13,7 @@ const StatsBanner = () => {
             <Container maxWidth='lg'>
                 <Box display='flex' justifyContent='space-between'>
                     { numbers.map((num, id) => (
-                        <Box display='flex' flexDirection='column' alignItems='center'>
+                        <Box key={id} display='flex' flexDirection='column' alignItems='center'>
                             <CountUp
                                 start={0}
                                 end={num}
