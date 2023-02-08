@@ -4,6 +4,7 @@ import CardSection from '../components/CardSection'
 import Data from '../data/tutoring/data.json'
 import Banner from '../assets/banner_tutoring.png'
 import { Box, Container, Typography } from '@mui/material'
+import Areas from '../components/Areas'
 
 const Tutoring = () => {
   return (
@@ -40,6 +41,12 @@ const Tutoring = () => {
             </Box>
           </Container>
       </Box>
+      <Areas 
+        title='As nossas áreas de estudo'
+        subtitle='Conheça as nossas amplas opções de ensino'
+        cards={Data.Cards}
+        hasLink={true}
+      />
     </>
   )
 

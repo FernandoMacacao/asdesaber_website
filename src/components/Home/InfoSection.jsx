@@ -1,9 +1,8 @@
-import { Box } from '@mui/system'
 import React from 'react'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import { Button, ImageListItem } from '@mui/material'
+import { Button, ImageListItem, Box } from '@mui/material'
 
 const InfoSection = ({ title, subtitle, text, img, buttonWhite, imageFirst, backgroundBlue }) => {
   return (

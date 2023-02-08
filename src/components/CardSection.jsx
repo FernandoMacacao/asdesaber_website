@@ -32,8 +32,8 @@ const CardSection = ({title, subtitle, plans }) => {
                           }
                       </Typography>                      
                       {plan.hasChecks ? 
-                        plan.checks.map((check) => { return (
-                          <Box display='flex' width='100%'>
+                        plan.checks.map((check, id) => { return (
+                          <Box key={id} display='flex' width='100%'>
                             <img src={CheckIcon} alt="check icon"/>
                             <Typography variant="body1" color="common.white" ml={1}>{check}</Typography>
                           </Box>
@@ -42,8 +42,8 @@ const CardSection = ({title, subtitle, plans }) => {
                         undefined
                       } 
                       {plan.hasX ? 
-                        plan.x.map((x) => { return (
-                          <Box display='flex' width='100%'>
+                        plan.x.map((x, id) => { return (
+                          <Box key={id} display='flex' width='100%'>
                             <img src={XIcon} alt="check icon"/>
                             <Typography variant="body1" color="common.white" ml={1}>{x}</Typography>
                           </Box>
