@@ -9,7 +9,7 @@ const text = ['Alunos', 'Áreas de estudo', 'Professores Certificados', 'Anos de
 const StatsBanner = () => {
     
     return (
-        <Box height='10vh' sx={{backgroundColor: '#1893c6'}} display='flex' alignItems='center'>
+        <Box py={3} maxHeight='15vh' sx={{backgroundColor: '#1893c6'}} display='flex' alignItems='center'>
             <Container maxWidth='lg'>
                 <Box display='flex' justifyContent='space-between'>
                     { numbers.map((num, id) => (
@@ -21,7 +21,7 @@ const StatsBanner = () => {
                                 delay={0}
                                 style={{color: '#f5f5f5', fontFamily: 'Lato', fontSize: '1.5rem', fontWeight: 700}}
                             />
-                            <Typography variant="body1" color="common.white">{text[id]}</Typography>
+                            <Typography variant="body1" color="common.white" textAlign='center' fontSize={{xs: '0.875rem', md: '1rem'}}>{text[id]}</Typography>
                         </Box>
                         ))
                     }

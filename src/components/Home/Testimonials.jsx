@@ -3,6 +3,8 @@ import { Box, Container } from '@mui/system'
 import React from 'react'
 import Slider from 'react-slick';
 import './Testimonials.css'
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
 
 const Testimonials = ({ testimonials }) => {
 
@@ -12,6 +14,8 @@ const Testimonials = ({ testimonials }) => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        nextArrow: <ArrowCircleRightIcon color='primary' sx={{"&:hover": { color: '#188AB9'}}}/>,
+        prevArrow: <ArrowCircleLeftIcon color='primary' sx={{"&:hover": { color: '#188AB9'}}}/>,
         responsive: [{
             breakpoint: '900px',
             settings: {
@@ -25,14 +29,14 @@ const Testimonials = ({ testimonials }) => {
       };
 
     return ( 
-        <Box my={10}>
+        <Box mt={10}>
             <Container maxWidth='lg'>
                 <Typography variant="h6" color="textSecondary" textAlign='center'>Testemunhos</Typography>
-                <Typography variant="h5" color="textPrimary" textAlign='center' mb={7}>O que os nossos alunos pensam sobre nós</Typography>
+                <Typography variant="h5" color="textPrimary" textAlign='center' mb={{xs: 2, md: 6}}>O que os nossos alunos pensam sobre nós</Typography>
                 <Slider {...settings}>
                     {testimonials.map((testimonial, id) => (
-                        <Box key={id} p={2} sx={{height: '100%'}}>
-                            <Card sx={{display: 'flex', flexDirection: 'column', p: 2, backgroundColor: 'common.white', height: '100%', justifyContent: 'space-between'}} >
+                        <Box key={id} p={{xs: 3, md: 2}} sx={{height: '100%'}}>
+                            <Card sx={{display: 'flex', flexDirection: 'column', p: 2, backgroundColor: 'common.white', height: '100%'}} >
                                 <Box display='flex' alignItems='center' justifyContent='center' sx={{borderRadius: '50%', height: 50, width: 50}} backgroundColor='#1893c6'>
                                    <Typography variant="h6" fontWeight={400} color="common.white">{testimonial[0].charAt(0)}</Typography> 
                                 </Box>

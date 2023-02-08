@@ -117,7 +117,7 @@ function Navbar() {
                 </NavLink>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0, ml: 1 }}>
+          <Box sx={{ flexGrow: 0, ml: 1 }} display='flex' alignItems='center' justifyContent='center'>
             <Button variant='contained' color='secondary'>
               Inscreva-se!
             </Button>

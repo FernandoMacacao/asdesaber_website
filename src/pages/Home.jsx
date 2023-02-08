@@ -9,7 +9,8 @@ import { Card, CardContent, CardActionArea, Grid } from '@mui/material'
 import { Link } from 'react-router-dom'
 import InfoSection from '../components/Home/InfoSection'
 import Testimonials from '../components/Home/Testimonials'
-
+import SendMessageImg from '../assets/send_message.png'
+import MessageForm from '../components/MessageForm'
 
 const cards = [
   [
@@ -68,11 +69,11 @@ const Home = () => {
         secondButton={Data.Hero.secondButton}
       />
       <StatsBanner/>
-      <Box my={10} display='flex'>
+      <Box mt={10} display='flex'>
         <Container maxWidth='lg'>
           <Typography variant="h6" color="textSecondary" textAlign='center'>Os nossos serviços</Typography>
           <Typography variant="h5" color="textPrimary" textAlign='center'>Conheça o que temos para lhe oferecer</Typography>
-          <Grid container spacing={3} mt={4}>
+          <Grid container spacing={3} mt={{md: 5, xs: 2}}>
             {cards.map((card, id) => (
               <Grid key={id} item xs={12} md={4}>
                 <Card sx={{backgroundColor: 'common.white', height: '100%'}}>
@@ -112,6 +113,14 @@ const Home = () => {
         backgroundBlue={Data.Section2.backgroundBlue}
       />
      <Testimonials testimonials={testimonials}/>
+     <Grid container spacing={0} mt={10}>
+      <Grid item xs={12} md={6}>
+        <img style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} src={SendMessageImg} alt="send message" />
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <MessageForm/>
+      </Grid>
+     </Grid>
     </>
   )
 }

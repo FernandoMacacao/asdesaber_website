@@ -1,4 +1,7 @@
 import { createTheme } from "@mui/material/styles";
+import { createBreakpoints } from "@mui/system";
+
+const breakpoints = createBreakpoints({});
 
 export const theme = createTheme({
     palette: {
@@ -86,6 +89,44 @@ export const theme = createTheme({
                     borderRadius: 10
                 }
             }
-        }
+        },
+        MuiTypography: {
+            styleOverrides: {
+                h2: {
+                    [breakpoints.down('md')]: {
+                        fontSize: '3rem'
+                    }
+                },
+                h5: {
+                    [breakpoints.down('md')]: {
+                        fontSize: '1.125rem'
+                    }
+                },
+                h6: {
+                    [breakpoints.down('md')]: {
+                        fontSize: '1rem'
+                    }
+                }
+            }
+        },
+        MuiFormLabel: {
+            styleOverrides: {
+                root: {
+                    color: '#1893c6'
+                }
+            }
+        },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                notchedOutline: {
+                    borderColor: '#1893c6',
+                },
+                root: {
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#1893c6'
+                    }
+                }
+            }
+        },
     }
 })

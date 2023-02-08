@@ -1,6 +1,6 @@
 import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
-import { Button, Grid, Typography, Container } from '@mui/material'
+import { Button, Grid, Typography, Container, useMediaQuery } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 
@@ -17,7 +17,10 @@ const Hero = ({ title, subtitle, img, noButton, singleButton, firstButton, secon
       loadImage()
     }, [img])
 
+    const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"))
+
     return (
+
         <Box 
             sx={{
                 backgroundImage: `url(${heroImage})`,
@@ -29,28 +32,24 @@ const Hero = ({ title, subtitle, img, noButton, singleButton, firstButton, secon
                 mt: { md: 8, xs: 7}
         }}>
             <Container maxWidth='lg' sx={{height: '100%'}} >
-                <Box display='flex' height='100%' flexDirection='column' justifyContent='center' width='100%'>
-                    <Typography variant="h2" color="common.white"  width='57%'>{title}</Typography>
-                    <Typography variant="body1" color="common.white" mt={2}  width='50%'>{subtitle}</Typography>
+                <Box display='flex' height='100%' flexDirection='column' justifyContent='center' alignItems={{xs: 'center', md: 'flex-start'}} width='100%'>
+                    <Typography variant="h2" color="common.white" width={{xs:'100%', md: '57%'}} textAlign={{xs: 'center', md: 'left'}}>{title}</Typography>
+                    <Typography variant="body1" color="common.white" mt={2} width={{xs:'100%', md: '50%'}} textAlign={{xs: 'center', md: 'left'}}>{subtitle}</Typography>
                     { noButton ? undefined :
                         <>
                             { singleButton ? 
-                                <Grid container spacing={2}  mt={4}>
-                                    <Grid item>
-                                        <Button variant='contained' color='secondary'>{firstButton}</Button>
+                                <Grid container spacing={2} mt={4}>
+                                    <Grid item xs={12}>
+                                        <Button variant='contained' color='secondary' fullWidth={isFullWidth}>{firstButton}</Button>
                                     </Grid>
                                 </Grid>
                                 :
-                                <Grid container spacing={2}  mt={4}>
-                                    <Grid item>
-                                        <Button variant='contained' color='secondary'>{firstButton}</Button>
-                                    </Grid>
-                                    <Grid item>
-                                        <Link to='/sobrenos' style={{textDecoration: 'none'}}>
-                                            <Button variant='outlined' color='secondary'>{secondButton}</Button>
-                                        </Link>
-                                    </Grid>
-                                </Grid>
+                                <Box mt={4} display='flex' flexDirection={{xs: 'column', md: 'row'}} width='100%'>
+                                    <Button variant='contained' color='secondary' fullWidth={isFullWidth} sx={{mb: {xs: 2, md: 0}, mr: {xs: 0, md: 2}}}>{firstButton}</Button>
+                                    <Link to='/sobrenos' style={{textDecoration: 'none'}}>
+                                        <Button variant="outlined" color="secondary" fullWidth={isFullWidth}>{secondButton}</Button>
+                                    </Link>
+                                </Box>
                             }
                         </>
                     }
