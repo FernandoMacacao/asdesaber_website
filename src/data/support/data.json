@@ -7,5 +7,31 @@
         "singleButton": true,
         "firstButton": "Inscreva-se!",
         "secondButton": ""
-    }
+    },
+    "Plans": [
+        {
+            "title": "Psicologia e Psicomotricidade",
+            "icon": "plan_icon_4.svg",
+            "text": "Este espaço destina-se a oferecer apoio às crianças e às suas famílias nas suas necessidades psicológicas e educativas, através de áreas como a psicologia e psicomotricidade.",
+            "hasLinkText": false,
+            "linkText": "",
+            "href": "",
+            "hasChecks": false,
+            "checks": [""],
+            "hasX": false,
+            "x": [""]
+        },
+        {
+            "title": "Orientação Vocacional",
+            "icon": "plan_icon_5.svg",
+            "text": "A Orientação vocacional destina-se a auxiliar os jovens na escolha da área/curso de prosseguimento de estudos/carreira, mais adequada às suas realidades pessoais.",
+            "hasLinkText": false,
+            "linkText": "",
+            "href": "",
+            "hasChecks": false,
+            "checks": [""],
+            "hasX": false,
+            "x": [""]
+        }
+    ]
 }

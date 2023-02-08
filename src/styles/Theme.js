@@ -128,5 +128,12 @@ export const theme = createTheme({
                 }
             }
         },
+        MuiCardHeader: {
+            styleOverrides: {
+                root: {
+                    fontSize: '1rem'
+                }
+            }
+        }
     }
 })

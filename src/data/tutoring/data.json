@@ -7,5 +7,43 @@
         "singleButton": true,
         "firstButton": "Inscreva-se!",
         "secondButton": ""
-    }
+    },
+    "Plans": [
+        {
+            "title": "Estudo Acompanhado",
+            "icon": "plan_icon_1.svg",
+            "text": "Este serviço proporciona todos os meios necessários à orientação do trabalho escolar quotidiano para que este tenha por base a excelência.",
+            "hasLinkText": false,
+            "linkText": "",
+            "href": "",
+            "hasChecks": true,
+            "checks": ["Presencial", "Individual ou Grupo", "2º e 3º ciclo", "Mensalidade Fixa"],
+            "hasX": true,
+            "x": ["Online"]
+        },
+        {
+            "title": "Explicações",
+            "icon": "plan_icon_2.svg",
+            "text": "Neste formato, o aluno pode focar a sua atenção nas áreas em que apresenta dificuldades esclarecendo a teoria e praticando exercícios.",
+            "hasLinkText": false,
+            "linkText": "",
+            "href": "",
+            "hasChecks": true,
+            "checks": ["Online ou Presencial.", "Individual ou Grupo", "Ensino Básico e Secundário", "Ensino Superior"],
+            "hasX": false,
+            "x": [""]
+        },
+        {
+            "title": "Preparação para exames",
+            "icon": "plan_icon_3.svg",
+            "text": "Com vista ao sucesso promovemos cursos anuais e intensivos que sistematizam conteúdos e esclarecem as últimas dúvidas de",
+            "hasLinkText": true,
+            "linkText": "preparação para os exames.",
+            "href": "/explicacoes/cursos",
+            "hasChecks": true,
+            "checks": ["Online ou Presencial.", "Individual ou Grupo", "Cursos Anuais 9º e 12º", "Cursos Intensivos 11º e 12º"],
+            "hasX": false,
+            "x": [""]
+        }
+    ]
 }

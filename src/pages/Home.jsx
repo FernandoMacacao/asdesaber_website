@@ -113,14 +113,14 @@ const Home = () => {
         backgroundBlue={Data.Section2.backgroundBlue}
       />
      <Testimonials testimonials={testimonials}/>
-     <Grid container spacing={0} mt={10}>
+     {/* <Grid container spacing={0} mt={10}>
       <Grid item xs={12} md={6}>
         <img style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} src={SendMessageImg} alt="send message" />
       </Grid>
       <Grid item xs={12} md={6}>
         <MessageForm/>
       </Grid>
-     </Grid>
+     </Grid> */}
     </>
   )
 }

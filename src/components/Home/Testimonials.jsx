@@ -8,14 +8,22 @@ import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
 
 const Testimonials = ({ testimonials }) => {
 
+    const NextArrow = ({currentSlide, slideCount, ...props}) => (
+        <ArrowCircleRightIcon {...props} color='primary' sx={{"&:hover": { color: '#188AB9'}}}/>
+    );
+
+    const PrevArrow = ({currentSlide, slideCount, ...props}) => (
+        <ArrowCircleLeftIcon {...props} color='primary' sx={{"&:hover": { color: '#188AB9'}}}/>
+    );
+
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        nextArrow: <ArrowCircleRightIcon color='primary' sx={{"&:hover": { color: '#188AB9'}}}/>,
-        prevArrow: <ArrowCircleLeftIcon color='primary' sx={{"&:hover": { color: '#188AB9'}}}/>,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
         responsive: [{
             breakpoint: '900px',
             settings: {
