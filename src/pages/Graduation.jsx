@@ -1,6 +1,7 @@
 import React from 'react'
 import Areas from '../components/Areas'
 import Hero from "../components/Hero"
+import Footer from '../components/Footer'
 import Data from '../data/graduation/data.json'
 import Banner from '../assets/banner_graduation.png'
 import DGERTLogo from '../assets/logo_dgert.png'
@@ -48,6 +49,7 @@ const Graduation = () => {
             </Box>
           </Container>
       </Box>
+     <Footer/>
     </>
 
   )

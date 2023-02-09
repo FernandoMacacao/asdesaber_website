@@ -6,6 +6,7 @@ import Banner from '../assets/banner_support.png'
 import LogoConceitoPhi from '../assets/logo_conceitoPhi.webp'
 import LogoTelepsia from '../assets/logo_telepsia.jpg'
 import { Box, Container, Typography, Button, Grid, useMediaQuery } from '@mui/material'
+import Footer from '../components/Footer'
 
 const Support = () => {
 
@@ -51,16 +52,19 @@ const Support = () => {
             </Box>
           </Container>
       </Box>
-      <Box mt={10} display='flex'>
+      <Box my={10} display='flex'>
         <Container maxWidth='lg'>
-          <Typography variant="h6" color="textSecondary" textAlign='center'>Os Nossos parceiros</Typography>
-          <Typography variant="h5" color="textPrimary" textAlign='center' mb={{xs: 2, md: 6}}>Conte com as nossas parcerias para satisfazer as suas necessidades. </Typography>
-          <Box display='flex' flexDirection='row' justifyContent='center'>
-            <img style={{marginInline: '20px'}} src={LogoConceitoPhi} alt="Conceito Phi" height='80px'/>
-            <img style={{marginInline: '20px'}} src={LogoTelepsia} alt="Telépsia" height='80px'/>
+          <Box>
+            <Typography variant="h6" color="textSecondary" textAlign='center'>Os Nossos parceiros</Typography>
+            <Typography variant="h5" color="textPrimary" textAlign='center' mb={{xs: 2, md: 6}}>Conte com as nossas parcerias para satisfazer as suas necessidades. </Typography>
+            <Box display='flex' flexDirection='row' justifyContent='center' >
+              <img style={{marginInline: '20px'}} src={LogoConceitoPhi} alt="Conceito Phi" height='80px'/>
+              <img style={{marginInline: '20px'}} src={LogoTelepsia} alt="Telépsia" height='80px'/>
+            </Box>
           </Box>
         </Container>
       </Box>
+      <Footer/>
     </>
   )
 }
