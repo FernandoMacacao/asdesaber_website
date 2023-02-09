@@ -1,16 +1,22 @@
-import React from 'react'
-import Hero from "../components/Hero"
-import CardSection from '../components/CardSection'
-import Data from '../data/support/data.json'
-import Banner from '../assets/banner_support.png'
-import LogoConceitoPhi from '../assets/logo_conceitoPhi.webp'
-import LogoTelepsia from '../assets/logo_telepsia.jpg'
-import { Box, Container, Typography, Button, Grid, useMediaQuery } from '@mui/material'
-import Footer from '../components/Footer'
+import React from "react";
+import Hero from "../components/Hero";
+import CardSection from "../components/CardSection";
+import Data from "../data/support/data.json";
+import Banner from "../assets/banner_support.png";
+import LogoConceitoPhi from "../assets/logo_conceitoPhi.webp";
+import LogoTelepsia from "../assets/logo_telepsia.jpg";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Grid,
+  useMediaQuery,
+} from "@mui/material";
+import Footer from "../components/Footer";
 
 const Support = () => {
-
-  const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"))
+  const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   return (
     <>
@@ -23,50 +29,99 @@ const Support = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
-      <CardSection 
-        title='Os Nossos planos'
-        subtitle='Escolha o plano ideal para o ajudar a alcançar os seus objetivos académicos'
+      <CardSection
+        title="Os Nossos planos"
+        subtitle="Escolha o plano ideal para o ajudar a alcançar os seus objetivos académicos"
         plans={Data.Plans}
       />
-      <Box 
+      <Box
         sx={{
           backgroundImage: `url(${Banner})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          maxWidth: '100vw',
-          height: '30vh',
-          mt: 10
-        }}>
-          <Container maxWidth='lg' sx={{height: '100%'}}>
-            <Box display='flex' height='100%' flexDirection='column' justifyContent='center' alignItems='center' width='100%'>
-              <Typography variant="h5" color="common.white" textAlign='center'>Consulte os nossos programas!</Typography>
-              <Grid display='flex' justifyContent='center' flexDirection={{xs: 'column', md: 'row'}} container spacing={2} mt={1}>
-                <Grid item>
-                  <Button variant="contained" color="secondary" fullWidth={isFullWidth}>Psicologia e Psicomotricidade</Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="contained" color="secondary" fullWidth={isFullWidth}>Orientação Vocacional</Button>
-                </Grid>
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          maxWidth: "100vw",
+          height: "30vh",
+          mt: 10,
+        }}
+      >
+        <Container maxWidth="lg" sx={{ height: "100%" }}>
+          <Box
+            display="flex"
+            height="100%"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            width="100%"
+          >
+            <Typography variant="h5" color="common.white" textAlign="center">
+              Consulte os nossos programas!
+            </Typography>
+            <Grid
+              display="flex"
+              justifyContent="center"
+              flexDirection={{ xs: "column", md: "row" }}
+              container
+              spacing={2}
+              mt={1}
+            >
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  fullWidth={isFullWidth}
+                >
+                  Psicologia e Psicomotricidade
+                </Button>
               </Grid>
-            </Box>
-          </Container>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  fullWidth={isFullWidth}
+                >
+                  Orientação Vocacional
+                </Button>
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
       </Box>
-      <Box my={10} display='flex'>
-        <Container maxWidth='lg'>
+      <Box my={10} display="flex">
+        <Container maxWidth="lg">
           <Box>
-            <Typography variant="h6" color="textSecondary" textAlign='center'>Os Nossos parceiros</Typography>
-            <Typography variant="h5" color="textPrimary" textAlign='center' mb={{xs: 2, md: 6}}>Conte com as nossas parcerias para satisfazer as suas necessidades. </Typography>
-            <Box display='flex' flexDirection='row' justifyContent='center' >
-              <img style={{marginInline: '20px'}} src={LogoConceitoPhi} alt="Conceito Phi" height='80px'/>
-              <img style={{marginInline: '20px'}} src={LogoTelepsia} alt="Telépsia" height='80px'/>
+            <Typography variant="h6" color="textSecondary" textAlign="center">
+              Os Nossos parceiros
+            </Typography>
+            <Typography
+              variant="h5"
+              color="textPrimary"
+              textAlign="center"
+              mb={{ xs: 2, md: 6 }}
+            >
+              Conte com as nossas parcerias para satisfazer as suas
+              necessidades.{" "}
+            </Typography>
+            <Box display="flex" flexDirection="row" justifyContent="center">
+              <img
+                style={{ marginInline: "20px" }}
+                src={LogoConceitoPhi}
+                alt="Conceito Phi"
+                height="80px"
+              />
+              <img
+                style={{ marginInline: "20px" }}
+                src={LogoTelepsia}
+                alt="Telépsia"
+                height="80px"
+              />
             </Box>
           </Box>
         </Container>
       </Box>
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Support
+export default Support;

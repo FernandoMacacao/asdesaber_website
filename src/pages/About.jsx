@@ -1,7 +1,7 @@
-import React from 'react'
-import Hero from "../components/Hero"
-import StatsBanner from '../components/StatsBanner'
-import Data from '../data/about/data.json'
+import React from "react";
+import Hero from "../components/Hero";
+import StatsBanner from "../components/StatsBanner";
+import Data from "../data/about/data.json";
 
 const About = () => {
   return (
@@ -15,10 +15,9 @@ const About = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
-      <StatsBanner/>
+      <StatsBanner />
     </>
+  );
+};
 
-  )
-}
-
-export default About
+export default About;

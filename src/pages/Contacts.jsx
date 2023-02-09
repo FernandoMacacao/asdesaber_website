@@ -1,6 +1,6 @@
-import React from 'react'
-import Hero from "../components/Hero"
-import Data from '../data/contacts/data.json'
+import React from "react";
+import Hero from "../components/Hero";
+import Data from "../data/contacts/data.json";
 
 const Contacts = () => {
   return (
@@ -13,7 +13,7 @@ const Contacts = () => {
       firstButton={Data.Hero.firstButton}
       secondButton={Data.Hero.secondButton}
     />
-  )
-}
+  );
+};
 
-export default Contacts
+export default Contacts;

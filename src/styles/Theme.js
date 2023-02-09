@@ -134,6 +134,15 @@ export const theme = createTheme({
                     fontSize: '1rem'
                 }
             }
+        },
+        MuiFormHelperText: {
+            styleOverrides: {
+                root: {
+                    color: 'red',
+                    marginLeft: 0,
+                    fontFamily: 'Lato'
+                }
+            }
         }
     }
 })

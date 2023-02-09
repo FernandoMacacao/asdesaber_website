@@ -1,6 +1,6 @@
-import React from 'react'
-import Hero from "../components/Hero"
-import Data from '../data/courses/data.json'
+import React from "react";
+import Hero from "../components/Hero";
+import Data from "../data/courses/data.json";
 
 const Courses = () => {
   return (
@@ -13,7 +13,7 @@ const Courses = () => {
       firstButton={Data.Hero.firstButton}
       secondButton={Data.Hero.secondButton}
     />
-  )
-}
+  );
+};
 
-export default Courses
+export default Courses;
