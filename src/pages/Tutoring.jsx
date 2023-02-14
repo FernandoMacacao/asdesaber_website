@@ -1,10 +1,12 @@
 import React from "react";
 import Hero from "../components/Hero";
 import CardSection from "../components/CardSection";
+import Footer from "../components/Footer";
 import Data from "../data/tutoring/data.json";
 import Banner from "../assets/banner_tutoring.png";
 import { Box, Container, Typography } from "@mui/material";
 import Areas from "../components/Areas";
+import Simulator from "../components/Tutoring/Simulator";
 
 const Tutoring = () => {
   return (
@@ -66,6 +68,8 @@ const Tutoring = () => {
         cards={Data.Cards}
         hasLink={true}
       />
+      <Simulator />
+      <Footer />
     </>
   );
 };

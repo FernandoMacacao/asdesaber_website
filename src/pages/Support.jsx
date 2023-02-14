@@ -30,8 +30,8 @@ const Support = () => {
         secondButton={Data.Hero.secondButton}
       />
       <CardSection
-        title="Os Nossos planos"
-        subtitle="Escolha o plano ideal para o ajudar a alcançar os seus objetivos académicos"
+        title="Psicologia em parceria"
+        subtitle="A relevância e contribuição destas áreas para o sucesso pessoal é crucial."
         plans={Data.Plans}
       />
       <Box
@@ -90,32 +90,35 @@ const Support = () => {
       <Box my={10} display="flex">
         <Container maxWidth="lg">
           <Box>
-            <Typography variant="h6" color="textSecondary" textAlign="center">
-              Os Nossos parceiros
-            </Typography>
             <Typography
               variant="h5"
               color="textPrimary"
               textAlign="center"
               mb={{ xs: 2, md: 6 }}
             >
-              Conte com as nossas parcerias para satisfazer as suas
-              necessidades.{" "}
+              Ao nosso lado, os melhores. Conte com as nossas parcerias para
+              satisfazer as suas necessidades.
             </Typography>
-            <Box display="flex" flexDirection="row" justifyContent="center">
-              <img
-                style={{ marginInline: "20px" }}
-                src={LogoConceitoPhi}
-                alt="Conceito Phi"
-                height="80px"
-              />
-              <img
-                style={{ marginInline: "20px" }}
-                src={LogoTelepsia}
-                alt="Telépsia"
-                height="80px"
-              />
-            </Box>
+            <Container maxWidth="md">
+              <Box
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between"
+              >
+                <img
+                  style={{ marginInline: "20px" }}
+                  src={LogoConceitoPhi}
+                  alt="Conceito Phi"
+                  height="80px"
+                />
+                <img
+                  style={{ marginInline: "20px" }}
+                  src={LogoTelepsia}
+                  alt="Telépsia"
+                  height="80px"
+                />
+              </Box>
+            </Container>
           </Box>
         </Container>
       </Box>

@@ -1,7 +1,7 @@
 {
     "Hero": {
-        "title": "Ensino Básico, Secundário e Superior.",
-        "subtitle": "Alcance o sucesso com as nossas explicações! Esclareça as suas dúvidas e aprofunde os seus conhecimentos.",
+        "title": "Ensino Básico, Secundário e Superior",
+        "subtitle": "Em cada grau de escolaridade esclarecemos dúvidas e aprofundamos conhecimentos.",
         "img": "hero_tutoring.png",
         "noButton": false,
         "singleButton": true,
@@ -12,36 +12,39 @@
         {
             "title": "Estudo Acompanhado",
             "icon": "plan_icon_1.svg",
-            "text": "Este serviço proporciona todos os meios necessários à orientação do trabalho escolar quotidiano para que este tenha por base a excelência.",
+            "hasText": true,
+            "text": "Este serviço de continuidade proporciona todos os meios necessários à orientação do trabalho escolar quotidiano.",
             "hasLinkText": false,
             "linkText": "",
             "href": "",
             "hasChecks": true,
-            "checks": ["Presencial", "Individual ou Grupo", "2º e 3º ciclo", "Mensalidade Fixa"],
-            "hasX": true,
-            "x": ["Online"]
+            "checks": ["Presencial ou Online", "Individual ou em Grupo", "2º e 3º ciclo", "Mensalidade Fixa"],
+            "hasX": false,
+            "x": [""]
         },
         {
             "title": "Explicações",
             "icon": "plan_icon_2.svg",
-            "text": "Neste formato, o aluno pode focar a sua atenção nas áreas em que apresenta dificuldades esclarecendo a teoria e praticando exercícios.",
+            "hasText": true,
+            "text": "Neste formato, a atenção é focada nas áreas em que o aluno apresenta dificuldades esclarecendo a teoria e praticando exercícios.",
             "hasLinkText": false,
             "linkText": "",
             "href": "",
             "hasChecks": true,
-            "checks": ["Online ou Presencial.", "Individual ou Grupo", "Ensino Básico e Secundário", "Ensino Superior"],
+            "checks": ["Online ou Presencial.", "Individual ou em Grupo", "Ensino Básico e Secundário", "Ensino Superior"],
             "hasX": false,
             "x": [""]
         },
         {
             "title": "Preparação para exames",
             "icon": "plan_icon_3.svg",
-            "text": "Com vista ao sucesso promovemos cursos anuais e intensivos que sistematizam conteúdos e esclarecem as últimas dúvidas de",
+            "hasText": true,
+            "text": "é revista toda a teoria com sistematização de conteúdos e prática de exercicios especificos de exame.",
             "hasLinkText": true,
-            "linkText": "preparação para os exames.",
+            "linkText": "Na preparação para exame",
             "href": "/explicacoes/cursos",
             "hasChecks": true,
-            "checks": ["Online ou Presencial.", "Individual ou Grupo", "Cursos Anuais 9º e 12º", "Cursos Intensivos 11º e 12º"],
+            "checks": ["Online ou Presencial.", "Individual ou em Grupo", "Cursos Anuais 9º, 11º e 12º", "Cursos Intensivos 9º, 11º e 12º"],
             "hasX": false,
             "x": [""]
         }
@@ -59,35 +62,35 @@
             "title": "2º Ciclo",
             "odd": false,
             "hasHover": true,
-            "hoverText": ["Ciências da Natureza", "História e Geografia de Portugal", "Inglês", "Língua Portuguesa", "Matemática"]
+            "hoverText": ["Ciências da Natureza", "História e Geografia de Portugal", "Inglês", "Português", "Matemática"]
         },
         {
             "icon": "third_cicle.svg",
             "title": "3º Ciclo",
             "odd": true,
             "hasHover": true,
-            "hoverText": ["Alemão", "Ciências Físico-Químicas", "Espanhol", "Francês", "Geografia", "História", "Inglês", "Língua Portuguesa", "Matemática"]
+            "hoverText": ["Ciências Físico-Químicas", "Ciências Naturais", "Espanhol", "Francês", "Geografia", "História", "Inglês", "Português", "Matemática"]
         },
         {
             "icon": "science.svg",
             "title": "Ciências",
             "odd": false,
             "hasHover": true,
-            "hoverText": ["Biologia e Geologia", "Filosofia", "Física", "Física e Química A", "Inglês", "Matemática A e B", "Português", "Química", "Geometria Descritiva A"]
+            "hoverText": ["Biologia e Geologia", "Física", "Física e Química A", "Matemática A e B", "Química"]
         },
         {
             "icon": "humanity.svg",
             "title": "Humanidades",
             "odd": true,
             "hasHover": true,
-            "hoverText": ["Alemão", "Espanhol", "Filosofia", "Francês", "História A e B", "Inglês", "Literatura Portuguesa", "Matemática Aplic. às Ciências Sociais", "Psicologia"]
+            "hoverText": ["Português", "Espanhol", "Filosofia", "Francês", "História A e B", "Inglês", "Literatura Portuguesa", "Matemática Aplic. às Ciências Sociais", "Psicologia e Sociologia"]
         },
         {
             "icon": "mix.svg",
             "title": "Economia & Artes",
             "odd": false,
             "hasHover": true,
-            "hoverText": ["Desenho A", "Economia A e C", "Geografia A e C", "História da Cultura e das Artes"]
+            "hoverText": ["Geometria Descritiva", "Desenho A", "Economia A e C", "Geografia A e C", "História da Cultura e das Artes"]
         }
     ]
 }

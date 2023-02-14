@@ -1,7 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
 import Hero from "../components/Hero";
-import StatsBanner from "../components/StatsBanner";
 import Data from "../data/home/data.json";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -12,24 +11,25 @@ import Testimonials from "../components/Home/Testimonials";
 import MessageForm from "../components/MessageForm";
 import Footer from "../components/Footer";
 import SendMessageImg from "../assets/send_message.png";
+import SectionHeader from "../components/SectionHeader";
 
 const cards = [
   [
     "tutoring.svg",
     "Explicações",
-    "Alcance o sucesso com as nossas explicações! Esclareça as suas dúvidas e aprofunde os seus conhecimentos.",
+    "As nossas explicações são desenhadas e adaptadas a cada aluno dentro das várias modalidades que oferecemos.",
     "/explicacoes",
   ],
   [
     "support.svg",
     "Apoio Psicopedagógico",
-    "Transforme o sucesso em realidade com o nosso apoio! Explore o seu potencial, supere obstáculos e conquiste felicidade.",
+    "Temos parcerias com equipas de psicólogos que trabalham na área do autoconhecimento e da aprendizagem.",
     "/apoio",
   ],
   [
     "graduation.svg",
     "Formação",
-    "Investir em formação é vital para o sucesso numa sociedade competitiva. Aproveite as nossas oportunidades para melhorar as suas habilidades.",
+    "Somos uma empresa certificada na área da formação.",
     "/formacao",
   ],
 ];
@@ -69,16 +69,14 @@ const Home = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
-      <StatsBanner />
+      {/* INSERIR BANNER FRASE */}
       <Box mt={10} display="flex">
         <Container maxWidth="lg">
-          <Typography variant="h6" color="textSecondary" textAlign="center">
-            Os nossos serviços
-          </Typography>
-          <Typography variant="h5" color="textPrimary" textAlign="center">
-            Conheça o que temos para lhe oferecer
-          </Typography>
-          <Grid container spacing={3} mt={{ md: 5, xs: 2 }}>
+          <SectionHeader
+            title="Os nossos serviços"
+            subtitle="Conheça o que temos para lhe oferecer"
+          />
+          <Grid container rowSpacing={0} columnSpacing={3}>
             {cards.map((card, id) => (
               <Grid key={id} item xs={12} md={4}>
                 <Card sx={{ backgroundColor: "common.white", height: "100%" }}>

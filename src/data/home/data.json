@@ -1,7 +1,7 @@
 {
     "Hero": {
         "title": "Pensar. Aprender. Formar.",
-        "subtitle": "Desperte o seu potencial e alcance novos patamares de sucesso. Junte-se a nós para um futuro brilhante.",
+        "subtitle": "Educação não transforma o mundo. Educação transforma as pessoas. Pessoas transformam o mundo.",
         "img": "hero_home.png",
         "noButton": false,
         "singleButton": false,
@@ -10,17 +10,17 @@
     },
     "Section1": {
         "title": "Explicações",
-        "subtitle": "Explicações individuais, estudo acompanhado e preparação para os exames", 
-        "text": "As explicações pretendem ser um suporte complementar à frequência das aulas curriculares. Atendendo às caracteristicas do aluno e do seu percurso académico oferecemos a modalidade de explicação que melhor se adapta às suas vontades e necessidades. Esta versatilidade e excelência no serviço faz de nós o seu parceiro ideal e juntos faremos do seu sucesso o nosso maior orgulho.", 
+        "subtitle": "Online para todo o mundo. Presencial no Parque das Nações ", 
+        "text": "As explicações pretendem ser um suporte complementar à frequência das aulas curriculares. Em conjunto com o aluno e mediante a análise do seu percurso académico e das suas caracteristicas e potencialidades desenhamos um plano tendo em conta os objetivos a alcançar.", 
         "img": "tutoring_section.png",
         "buttonWhite": true, 
         "imageFirst": true, 
         "backgroundBlue": true
     }, 
     "Section2": {
-        "title": "Apoio Psicopedagógico",
-        "subtitle": "Psicologia ao serviço do êxito escolar", 
-        "text": "Oferecemos apoio psicopedagógico com o objetivo de ajudar na tomada de decisão, na descoberta de interesses e características pessoais e no sucesso escolar. Temos parcerias especializadas com programas de Psicologia e Psicomotricidade e Orientação Vocacional. Pretendemos educar pela positiva, visando o desenvolvimento pessoal e a felicidade dos alunos, pais e educadores.", 
+        "title": "Preparação para exames",
+        "subtitle": "Direcionada para os momentos mais decisivos do percurso académico", 
+        "text": "Com o objetivo de suprir as lacunas e carências de aprendizagens anteriores ou aprofundar conhecimentos com vista ao sucesso escolar, o Ás de Saber promove cursos que sistematizam conteúdos, analisam critérios e esclarecem dúvidas.", 
         "img": "support_section.png",
         "buttonWhite": false, 
         "imageFirst": false, 

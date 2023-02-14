@@ -4,6 +4,7 @@ import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import BlueArrow from "../assets/blue_arrow.svg";
 import OrangeArrow from "../assets/orange_arrow.svg";
+import SectionHeader from "./SectionHeader";
 
 const Areas = ({ title, subtitle, cards, hasLink }) => {
   const [cardHover, setCardHover] = useState(-1);
@@ -11,12 +12,7 @@ const Areas = ({ title, subtitle, cards, hasLink }) => {
   return (
     <Box backgroundColor="#1893c6" py={10}>
       <Container maxWidth="lg">
-        <Typography variant="h6" color="textSecondary" textAlign="center">
-          {title}
-        </Typography>
-        <Typography variant="h5" color="common.white" textAlign="center">
-          {subtitle}
-        </Typography>
+        <SectionHeader title={title} subtitle={subtitle} white />
         <Grid container spacing={3} mt={{ md: 5, xs: 2 }}>
           {cards.map((card, id) => {
             return (

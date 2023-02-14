@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "./Testimonials.css";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import SectionHeader from "../SectionHeader";
 
 const Testimonials = ({ testimonials }) => {
   const NextArrow = ({ currentSlide, slideCount, ...props }) => (
@@ -33,13 +34,20 @@ const Testimonials = ({ testimonials }) => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: "900px",
+        breakpoint: 900,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
+          arrows: false,
           infinite: true,
           speed: 500,
+        },
+      },
+      {
+        breakpoint: 1250,
+        settings: {
+          arrows: false,
         },
       },
     ],
@@ -48,17 +56,10 @@ const Testimonials = ({ testimonials }) => {
   return (
     <Box mt={10}>
       <Container maxWidth="lg">
-        <Typography variant="h6" color="textSecondary" textAlign="center">
-          Testemunhos
-        </Typography>
-        <Typography
-          variant="h5"
-          color="textPrimary"
-          textAlign="center"
-          mb={{ xs: 2, md: 6 }}
-        >
-          O que os nossos alunos pensam sobre nós
-        </Typography>
+        <SectionHeader
+          title="Testemunhos"
+          subtitle="O que os nossos alunos pensam sobre nós"
+        />
         <Slider {...settings}>
           {testimonials.map((testimonial, id) => (
             <Box key={id} p={{ xs: 3, md: 2 }} sx={{ height: "100%" }}>

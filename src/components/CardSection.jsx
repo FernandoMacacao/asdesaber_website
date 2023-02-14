@@ -3,18 +3,14 @@ import { Box, Container } from "@mui/system";
 import React from "react";
 import CheckIcon from "../assets/check_icon.svg";
 import XIcon from "../assets/x_icon.svg";
+import SectionHeader from "../components/SectionHeader";
 import { Link } from "react-router-dom";
 
 const CardSection = ({ title, subtitle, plans }) => {
   return (
     <Box mt={10} display="flex">
       <Container maxWidth="lg">
-        <Typography variant="h6" color="textSecondary" textAlign="center">
-          {title}
-        </Typography>
-        <Typography variant="h5" color="textPrimary" textAlign="center">
-          {subtitle}
-        </Typography>
+        <SectionHeader title={title} subtitle={subtitle} />
         <Grid
           justifyContent="center"
           container
@@ -48,23 +44,25 @@ const CardSection = ({ title, subtitle, plans }) => {
                       alt={plan.title}
                       style={{ marginBottom: "20px" }}
                     />
-                    <Typography
-                      variant="body1"
-                      color="common.white"
-                      textAlign="center"
-                      style={{ marginBottom: "20px" }}
-                    >
-                      {plan.text}
-                      {plan.hasLinkText ? (
-                        <Link
-                          to={plan.href}
-                          style={{ color: "#f5f5f5", fontWeight: "bold" }}
-                        >
-                          {" "}
-                          {plan.linkText}
-                        </Link>
-                      ) : undefined}
-                    </Typography>
+                    {plan.hasText ? (
+                      <Typography
+                        variant="body1"
+                        color="common.white"
+                        textAlign="center"
+                        style={{ marginBottom: "20px" }}
+                      >
+                        {plan.hasLinkText ? (
+                          <Link
+                            to={plan.href}
+                            style={{ color: "#f5f5f5", fontWeight: "bold" }}
+                          >
+                            {plan.linkText}{" "}
+                          </Link>
+                        ) : undefined}
+                        {plan.text}
+                      </Typography>
+                    ) : undefined}
+
                     {plan.hasChecks
                       ? plan.checks.map((check, id) => {
                           return (

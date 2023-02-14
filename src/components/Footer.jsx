@@ -136,7 +136,12 @@ const Footer = () => {
                     alt={contact[1]}
                     width="20px"
                   />
-                  <Typography variant="body2" color="common.white" ml={0.5}>
+                  <Typography
+                    variant="body2"
+                    color="common.white"
+                    ml={0.5}
+                    textAlign={{ xs: "center", md: "left" }}
+                  >
                     {contact[1]}
                   </Typography>
                 </Box>
