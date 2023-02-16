@@ -62,7 +62,7 @@ const Footer = () => {
                   fontWeight={700}
                   mb={2}
                 >
-                  LinkWithScrolls
+                  Links
                 </Typography>
                 {pages.map((page, id) => (
                   <LinkWithScroll

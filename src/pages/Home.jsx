@@ -161,7 +161,7 @@ const Home = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <MessageForm />
+          <MessageForm shadow />
         </Grid>
       </Grid>
       <Footer />

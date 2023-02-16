@@ -50,7 +50,7 @@ const onSubmit = () => {
   console.log("Submitted");
 };
 
-const MessageForm = () => {
+const MessageForm = ({ shadow }) => {
   const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   const [subject, setSubject] = useState("");
@@ -76,8 +76,9 @@ const MessageForm = () => {
 
   return (
     <Box
-      py={3}
-      boxShadow=" -2px 0px 5px 0px rgba(0,0,0,0.75)"
+      py={shadow ? 3 : 0}
+      my={shadow ? 0 : 10}
+      boxShadow={shadow ? " -2px 0px 5px 0px rgba(0,0,0,0.75)" : undefined}
       height="100%"
       display="flex"
       alignItems="center"
