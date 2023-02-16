@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Button, ImageListItem, Box, useMediaQuery } from "@mui/material";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "../LinkWithScroll";
 
 const InfoSection = ({
   title,
@@ -95,7 +95,7 @@ const InfoSection = ({
                   {text}
                 </Typography>
 
-                <Link
+                <LinkWithScroll
                   to={href}
                   style={{
                     textDecoration: "none",
@@ -109,7 +109,7 @@ const InfoSection = ({
                   >
                     Saiba Mais
                   </Button>
-                </Link>
+                </LinkWithScroll>
               </div>
             </Box>
           </Grid>

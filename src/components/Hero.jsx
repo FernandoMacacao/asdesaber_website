@@ -7,7 +7,7 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "./LinkWithScroll";
 
 const Hero = ({
   title,
@@ -39,7 +39,7 @@ const Hero = ({
         backgroundSize: "cover",
         backgroundPosition: "center",
         maxWidth: "100vw",
-        height: "80vh",
+        height: "100vh",
         mt: { md: 8, xs: 7 },
       }}
     >
@@ -100,7 +100,10 @@ const Hero = ({
                   >
                     {firstButton}
                   </Button>
-                  <Link to="/sobrenos" style={{ textDecoration: "none" }}>
+                  <LinkWithScroll
+                    to="/sobrenos"
+                    style={{ textDecoration: "none" }}
+                  >
                     <Button
                       variant="outlined"
                       color="secondary"
@@ -108,7 +111,7 @@ const Hero = ({
                     >
                       {secondButton}
                     </Button>
-                  </Link>
+                  </LinkWithScroll>
                 </Box>
               )}
             </>

@@ -12,7 +12,7 @@ import {
   ImageListItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink, Link } from "react-router-dom";
+import LinkWithScroll, { NavLinkWithScroll } from "./LinkWithScroll";
 import logo from "../assets/logo.png";
 
 const pages = [
@@ -47,11 +47,11 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1, width: 90 }}>
-            <Link to="/">
+            <LinkWithScroll to="/">
               <ImageListItem>
                 <img src={logo} alt="logo ásdesaber" />
               </ImageListItem>
-            </Link>
+            </LinkWithScroll>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -82,7 +82,7 @@ function Navbar() {
               }}
             >
               {pages.map((page, id) => (
-                <NavLink
+                <NavLinkWithScroll
                   key={id}
                   to={pageRef[id]}
                   style={{ color: "#080F25", textDecoration: "none" }}
@@ -106,7 +106,7 @@ function Navbar() {
                       </MenuItem>
                     )
                   }
-                </NavLink>
+                </NavLinkWithScroll>
               ))}
             </Menu>
           </Box>
@@ -116,11 +116,11 @@ function Navbar() {
               display: { xs: "flex", md: "none" },
             }}
           >
-            <Link to="/">
+            <LinkWithScroll to="/">
               <ImageListItem sx={{ width: 80 }}>
                 <img src={logo} alt="logo ásdesaber" />
               </ImageListItem>
-            </Link>
+            </LinkWithScroll>
           </Box>
           <Box
             sx={{
@@ -130,7 +130,7 @@ function Navbar() {
             }}
           >
             {pages.map((page, id) => (
-              <NavLink
+              <NavLinkWithScroll
                 key={page}
                 to={pageRef[id]}
                 onClick={handleCloseNavMenu}
@@ -159,7 +159,7 @@ function Navbar() {
                     <Button sx={{ color: "#080F25" }}>{page}</Button>
                   )
                 }
-              </NavLink>
+              </NavLinkWithScroll>
             ))}
           </Box>
           <Box

@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Logo from "../assets/logo.png";
 import { Box, Container, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "./LinkWithScroll";
 
 const pages = [
   "Início",
@@ -62,10 +62,10 @@ const Footer = () => {
                   fontWeight={700}
                   mb={2}
                 >
-                  Links
+                  LinkWithScrolls
                 </Typography>
                 {pages.map((page, id) => (
-                  <Link
+                  <LinkWithScroll
                     key={id}
                     to={pageRef[id]}
                     style={{ textDecoration: "none", marginBottom: "5px" }}
@@ -73,7 +73,7 @@ const Footer = () => {
                     <Typography variant="body2" color="common.white">
                       {page}
                     </Typography>
-                  </Link>
+                  </LinkWithScroll>
                 ))}
               </Box>
             </Grid>
@@ -93,7 +93,7 @@ const Footer = () => {
                   Redes Sociais
                 </Typography>
                 {socialMedia.map((sm, id) => (
-                  <Link
+                  <LinkWithScroll
                     key={id}
                     to={sm[2]}
                     style={{
@@ -111,7 +111,7 @@ const Footer = () => {
                     <Typography variant="body2" color="common.white" ml={0.5}>
                       {sm[1]}
                     </Typography>
-                  </Link>
+                  </LinkWithScroll>
                 ))}
               </Box>
             </Grid>

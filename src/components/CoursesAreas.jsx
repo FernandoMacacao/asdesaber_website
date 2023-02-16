@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "./LinkWithScroll";
 
 const Courses = ({ title, subtitle, courses }) => {
   return (
@@ -62,7 +62,7 @@ const Courses = ({ title, subtitle, courses }) => {
                     {course.title}
                   </Typography>
                   {course.hasAnualCourse ? (
-                    <Link
+                    <LinkWithScroll
                       to="/"
                       style={{
                         textDecoration: "none",
@@ -81,9 +81,9 @@ const Courses = ({ title, subtitle, courses }) => {
                       <ArrowForwardIcon
                         color={index % 2 === 0 ? "info" : "success"}
                       />
-                    </Link>
+                    </LinkWithScroll>
                   ) : undefined}
-                  <Link
+                  <LinkWithScroll
                     to="/"
                     style={{
                       textDecoration: "none",
@@ -100,8 +100,8 @@ const Courses = ({ title, subtitle, courses }) => {
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
                     />
-                  </Link>
-                  <Link
+                  </LinkWithScroll>
+                  <LinkWithScroll
                     to="/"
                     style={{
                       textDecoration: "none",
@@ -118,7 +118,7 @@ const Courses = ({ title, subtitle, courses }) => {
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
                     />
-                  </Link>
+                  </LinkWithScroll>
                 </Box>
               </Box>
             </Container>

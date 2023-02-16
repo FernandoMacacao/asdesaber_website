@@ -5,7 +5,7 @@ import Data from "../data/home/data.json";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { Card, CardContent, CardActionArea, Grid } from "@mui/material";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "../components/LinkWithScroll";
 import InfoSection from "../components/Home/InfoSection";
 import Testimonials from "../components/Home/Testimonials";
 import MessageForm from "../components/MessageForm";
@@ -84,7 +84,7 @@ const Home = () => {
                   <Card
                     sx={{ backgroundColor: "common.white", height: "100%" }}
                   >
-                    <Link
+                    <LinkWithScroll
                       to={card[3]}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
@@ -118,7 +118,7 @@ const Home = () => {
                           </Box>
                         </CardContent>
                       </CardActionArea>
-                    </Link>
+                    </LinkWithScroll>
                   </Card>
                 </Grid>
               ))}

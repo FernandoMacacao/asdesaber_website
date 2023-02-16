@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import { Box, Container, MenuItem, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import LinkWithScroll from "../LinkWithScroll";
 import SectionHeader from "../SectionHeader";
 import PricePDF from "../../assets/prices.pdf";
 
@@ -220,9 +221,12 @@ const Simulator = () => {
             preçário aqui
           </Link>{" "}
           ou{" "}
-          <Link to="/contactos" style={{ color: "#1893c6", fontWeight: 700 }}>
+          <LinkWithScroll
+            to="/contactos"
+            style={{ color: "#1893c6", fontWeight: 700 }}
+          >
             contacte-nos.
-          </Link>
+          </LinkWithScroll>
         </Typography>
       </Container>
     </Box>

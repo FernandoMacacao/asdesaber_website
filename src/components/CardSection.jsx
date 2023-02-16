@@ -4,7 +4,7 @@ import React from "react";
 import CheckIcon from "../assets/check_icon.svg";
 import XIcon from "../assets/x_icon.svg";
 import SectionHeader from "../components/SectionHeader";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "./LinkWithScroll";
 
 const CardSection = ({ title, subtitle, plans }) => {
   return (
@@ -62,12 +62,12 @@ const CardSection = ({ title, subtitle, plans }) => {
                         style={{ marginBottom: "20px" }}
                       >
                         {plan.hasLinkText ? (
-                          <Link
+                          <LinkWithScroll
                             to={plan.href}
                             style={{ color: "#f5f5f5", fontWeight: "bold" }}
                           >
                             {plan.linkText}{" "}
-                          </Link>
+                          </LinkWithScroll>
                         ) : undefined}
                         {plan.text}
                       </Typography>

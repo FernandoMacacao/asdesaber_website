@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
-import { Link } from "react-router-dom";
+import LinkWithScroll from "./LinkWithScroll";
 import BlueArrow from "../assets/blue_arrow.svg";
 import OrangeArrow from "../assets/orange_arrow.svg";
 import SectionHeader from "./SectionHeader";
@@ -93,9 +93,12 @@ const Areas = ({ title, subtitle, cards, hasLink }) => {
             mt={5}
           >
             * Para informações relativas ao Ensino Superior{" "}
-            <Link to="/contactos" style={{ color: "#f5f5f5", fontWeight: 700 }}>
+            <LinkWithScroll
+              to="/contactos"
+              style={{ color: "#f5f5f5", fontWeight: 700 }}
+            >
               contacte-nos aqui.
-            </Link>
+            </LinkWithScroll>
           </Typography>
         ) : undefined}
       </Container>
