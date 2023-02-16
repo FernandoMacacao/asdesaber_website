@@ -14,6 +14,7 @@
         "text": "As explicações pretendem ser um suporte complementar à frequência das aulas curriculares. Em conjunto com o aluno e mediante a análise do seu percurso académico e das suas caracteristicas e potencialidades desenhamos um plano tendo em conta os objetivos a alcançar.", 
         "img": "tutoring_section.png",
         "buttonWhite": true, 
+        "href": "explicacoes",
         "imageFirst": true, 
         "backgroundBlue": true
     }, 
@@ -23,6 +24,7 @@
         "text": "Com o objetivo de suprir as lacunas e carências de aprendizagens anteriores ou aprofundar conhecimentos com vista ao sucesso escolar, o Ás de Saber promove cursos que sistematizam conteúdos, analisam critérios e esclarecem dúvidas.", 
         "img": "support_section.png",
         "buttonWhite": false, 
+        "href": "/explicacoes/cursos",
         "imageFirst": false, 
         "backgroundBlue": false
     }

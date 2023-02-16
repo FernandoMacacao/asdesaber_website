@@ -7,6 +7,7 @@ import Banner from "../assets/banner_tutoring.png";
 import { Box, Container, Typography } from "@mui/material";
 import Areas from "../components/Areas";
 import Simulator from "../components/Tutoring/Simulator";
+import ESADLogo from "../assets/logo_ESAD.png";
 
 const Tutoring = () => {
   return (
@@ -45,18 +46,19 @@ const Tutoring = () => {
             alignItems="center"
             width="100%"
           >
-            <Typography
-              variant="h6"
-              textTransform="none"
-              color="common.black"
-              textAlign="center"
-            >
+            <img src={ESADLogo} alt="logo ESAD" />
+            <Typography variant="h6" color="textSecondary" textAlign="center">
               Não perca esta oportunidade
             </Typography>
-            <Typography variant="h5" color="primary" textAlign="center">
+            <Typography variant="h5" color="common.black" textAlign="center">
               Aproveite 10% de Desconto nas Explicações Online!
             </Typography>
-            <Typography variant="body1" color="common.black" textAlign="center">
+            <Typography
+              variant="body1"
+              color="common.black"
+              textAlign="center"
+              mt={3}
+            >
               * Válido apenas para alunos da Escola Secundária António Damásio
             </Typography>
           </Box>

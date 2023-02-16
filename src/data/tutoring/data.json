@@ -11,6 +11,8 @@
     "Plans": [
         {
             "title": "Estudo Acompanhado",
+            "hasSubtitle": false,
+            "subtitle": "",
             "icon": "plan_icon_1.svg",
             "hasText": true,
             "text": "Este serviço de continuidade proporciona todos os meios necessários à orientação do trabalho escolar quotidiano.",
@@ -24,6 +26,8 @@
         },
         {
             "title": "Explicações",
+            "hasSubtitle": false,
+            "subtitle": "",
             "icon": "plan_icon_2.svg",
             "hasText": true,
             "text": "Neste formato, a atenção é focada nas áreas em que o aluno apresenta dificuldades esclarecendo a teoria e praticando exercícios.",
@@ -37,6 +41,8 @@
         },
         {
             "title": "Preparação para exames",
+            "hasSubtitle": false,
+            "subtitle": "",
             "icon": "plan_icon_3.svg",
             "hasText": true,
             "text": "é revista toda a teoria com sistematização de conteúdos e prática de exercicios especificos de exame.",

@@ -2,7 +2,7 @@ import { Card, CardContent, Rating, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import Slider from "react-slick";
-import "./Testimonials.css";
+import "../../styles/styles.css";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import SectionHeader from "../SectionHeader";
@@ -32,6 +32,7 @@ const Testimonials = ({ testimonials }) => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+
     responsive: [
       {
         breakpoint: 900,
@@ -54,7 +55,7 @@ const Testimonials = ({ testimonials }) => {
   };
 
   return (
-    <Box mt={10}>
+    <Box mt={10} className="caroussel">
       <Container maxWidth="lg">
         <SectionHeader
           title="Testemunhos"

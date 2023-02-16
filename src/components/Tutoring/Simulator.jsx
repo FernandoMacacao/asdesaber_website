@@ -3,14 +3,14 @@ import Typography from "@mui/material/Typography";
 import { Box, Container, MenuItem, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import SectionHeader from "../SectionHeader";
+import PricePDF from "../../assets/prices.pdf";
 
 const levels = [
-  "1º ao 6º ano",
-  "7º e 8º ano",
+  "1º ao 8º ano",
   "9º ano",
-  "10º e 11º ano",
+  "Disciplina sem exame 10º e 11º ano",
+  "Disciplina com exame 11º e 12º ano",
   "Superior",
-  "Aulas particulares de língua estrangeira",
 ];
 
 const weeklyHours = [
@@ -23,41 +23,66 @@ const weeklyHours = [
 
 const types = ["Online", "Presencial"];
 
+const modes = ["Individual", "Grupo"];
+
 const Simulator = () => {
-  const [level, setLevel] = useState(undefined);
-  const [hours, setHours] = useState(undefined);
-  const [type, setType] = useState(undefined);
+  const [level, setLevel] = useState("");
+  const [hours, setHours] = useState("");
+  const [type, setType] = useState("");
+  const [mode, setMode] = useState("");
   const [price, setPrice] = useState(0);
 
   const calculatePrice = () => {
-    switch (level.target.value) {
-      case levels[0] || levels[1]:
-        type.target.value === types[0]
-          ? setPrice(23 * hours.target.value * 4)
-          : setPrice(24 * hours.target.value * 4);
-        break;
-      case levels[2]:
-        type.target.value === types[0]
-          ? setPrice(23 * hours.target.value * 4)
-          : setPrice(25 * hours.target.value * 4);
-        break;
-      case levels[3]:
-        type.target.value === types[0]
-          ? setPrice(27 * hours.target.value * 4)
-          : setPrice(29 * hours.target.value * 4);
-        break;
-      case levels[4]:
-        type.target.value === types[0]
-          ? setPrice(40 * hours.target.value * 4)
-          : setPrice(42 * hours.target.value * 4);
-        break;
-      case levels[5]:
-        type.target.value === types[0]
-          ? setPrice(28 * hours.target.value * 4)
-          : setPrice(32 * hours.target.value * 4);
-        break;
-      default:
-        break;
+    if (mode.target.value === "Individual") {
+      switch (level.target.value) {
+        case levels[0]:
+          type === types[0]
+            ? setPrice(23 * hours.target.value * 4)
+            : setPrice(24 * hours.target.value * 4);
+          break;
+        case levels[1]:
+          type === types[0]
+            ? setPrice(23 * hours.target.value * 4)
+            : setPrice(25 * hours.target.value * 4);
+          break;
+        case levels[2]:
+          type === types[0]
+            ? setPrice(27 * hours.target.value * 4)
+            : setPrice(29 * hours.target.value * 4);
+          break;
+        case levels[3]:
+          type === types[0]
+            ? setPrice(30 * hours.target.value * 4)
+            : setPrice(32 * hours.target.value * 4);
+          break;
+        case levels[4]:
+          type === types[0]
+            ? setPrice(40 * hours.target.value * 4)
+            : setPrice(42 * hours.target.value * 4);
+          break;
+        default:
+          break;
+      }
+    } else {
+      switch (level.target.value) {
+        case levels[0]:
+          setPrice(18 * hours.target.value * 4);
+          break;
+        case levels[1]:
+          setPrice(18 * hours.target.value * 4);
+          break;
+        case levels[2]:
+          setPrice(23 * hours.target.value * 4);
+          break;
+        case levels[3]:
+          setPrice(25 * hours.target.value * 4);
+          break;
+        case levels[4]:
+          setPrice(36 * hours.target.value * 4);
+          break;
+        default:
+          break;
+      }
     }
   };
 
@@ -104,7 +129,7 @@ const Simulator = () => {
             id="type"
             label="Modalidade"
             defaultValue=""
-            onChange={setType}
+            onChange={(event) => setType(event.target.value)}
             sx={{ mt: 2 }}
           >
             {types.map((tp, id) => (
@@ -113,12 +138,33 @@ const Simulator = () => {
               </MenuItem>
             ))}
           </TextField>
+          {type === "Presencial" ? (
+            <TextField
+              required
+              select
+              id="mode"
+              label="Tipo"
+              defaultValue=""
+              onChange={setMode}
+              sx={{ mt: 2 }}
+            >
+              {modes.map((md, id) => (
+                <MenuItem key={id} value={md}>
+                  {md}
+                </MenuItem>
+              ))}
+            </TextField>
+          ) : undefined}
+
           <Button
             variant="contained"
             color="primary"
             sx={{ mt: 2 }}
             disabled={
-              type === undefined || level === undefined || hours === undefined
+              type === "" ||
+              level === "" ||
+              hours === "" ||
+              (type === "Presencial" && mode === "")
             }
             onClick={calculatePrice}
           >
@@ -166,7 +212,11 @@ const Simulator = () => {
         </Typography>
         <Typography variant="body1" color="primary" textAlign="center">
           *Caso permaneça com alguma questão consulte o{" "}
-          <Link to="/" style={{ color: "#1893c6", fontWeight: 700 }}>
+          <Link
+            to={PricePDF}
+            target="_blank"
+            style={{ color: "#1893c6", fontWeight: 700 }}
+          >
             preçário aqui
           </Link>{" "}
           ou{" "}

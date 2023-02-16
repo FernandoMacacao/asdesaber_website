@@ -7,5 +7,95 @@
         "singleButton": true,
         "firstButton": "Inscreva-se!",
         "secondButton": ""
+    },
+    "Courses": {
+        "online": [
+            {
+                "icon": "icon_course_fq.svg",
+                "title": "FISICA-QUÍMICA 11ºANO-ONLINE",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_bg.svg",
+                "title": "BIOLOGIA-GEOLOGIA 11ºANO-ONLINE",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_gd.svg",
+                "title": "GEOMETRIA DESCRITIVA 11ºANO-ONLINE",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_e.svg",
+                "title": "ECONOMIA 11ºANO-ONLINE",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_g.svg",
+                "title": "GEOGRAFIA 11ºANO-ONLINE",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_pt.svg",
+                "title": "PORTUGUÊS 12ºANO-ONLINE",
+                "hasAnualCourse": true,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_m.svg",
+                "title": "MATEMÁTICA 12ºANO-ONLINE",
+                "hasAnualCourse": true,
+                "pdf": ""
+            }
+        ],
+        "inPerson": [
+            {
+                "icon": "icon_course_fq.svg",
+                "title": "FISICA-QUÍMICA 11ºANO-presencial",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_bg.svg",
+                "title": "BIOLOGIA-GEOLOGIA 11ºANO-presencial",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_gd.svg",
+                "title": "GEOMETRIA DESCRITIVA 11ºANO-presencial",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_e.svg",
+                "title": "ECONOMIA 11ºANO-presencial",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_g.svg",
+                "title": "GEOGRAFIA 11ºANO-presencial",
+                "hasAnualCourse": false,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_pt.svg",
+                "title": "PORTUGUÊS 12ºANO-presencial",
+                "hasAnualCourse": true,
+                "pdf": ""
+            },
+            {
+                "icon": "icon_course_m.svg",
+                "title": "MATEMÁTICA 12ºANO-presencial",
+                "hasAnualCourse": true,
+                "pdf": ""
+            }
+        ]
     }
 }

@@ -39,6 +39,16 @@ const CardSection = ({ title, subtitle, plans }) => {
                     alignItems="center"
                     flexDirection="column"
                   >
+                    {plan.hasSubtitle ? (
+                      <Typography
+                        variant="h6"
+                        textTransform="none"
+                        color="common.white"
+                        mb={2}
+                      >
+                        {plan.subtitle}
+                      </Typography>
+                    ) : undefined}
                     <img
                       src={require(`../assets/${plan.icon}`)}
                       alt={plan.title}

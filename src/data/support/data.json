@@ -11,6 +11,8 @@
     "Plans": [
         {
             "title": "Psicologia e Psicomotricidade",
+            "hasSubtitle": true,
+            "subtitle": "Conceito Phi",
             "icon": "plan_icon_4.svg",
             "hasText": true,
             "text": "Transforme os seus pontos fracos em pontos fortes! Explore a relação entre emoção e razão numa construção otimista de conhecimento e descoberta do eu.",
@@ -24,6 +26,8 @@
         },
         {
             "title": "Orientação Vocacional",
+            "hasSubtitle": true,
+            "subtitle": "Telépsia",
             "icon": "plan_icon_5.svg",
             "hasText": true,
             "text": "A Orientação vocacional destina-se a auxiliar os jovens na escolha da área/curso de prosseguimento de estudos/carreira, mais adequada às suas realidades pessoais.",

@@ -2,7 +2,8 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Button, ImageListItem, Box } from "@mui/material";
+import { Button, ImageListItem, Box, useMediaQuery } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const InfoSection = ({
   title,
@@ -10,6 +11,7 @@ const InfoSection = ({
   text,
   img,
   buttonWhite,
+  href,
   imageFirst,
   backgroundBlue,
 }) => {
@@ -21,13 +23,17 @@ const InfoSection = ({
       pb={backgroundBlue ? undefined : 0}
       backgroundColor={backgroundBlue ? "#1893c6" : undefined}
       display="flex"
+      sx={{ overflowX: "hidden" }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Grid
           display="grid"
           container
           spacing={0}
-          gridAutoColumns={"1fr 1fr"}
+          gridTemplateColumns={{
+            xs: "1fr",
+            md: imageFirst ? "1fr 1fr" : "1fr 1fr",
+          }}
           gridTemplateAreas={
             imageFirst
               ? { xs: '"col1" "col2"', md: '"col1 col2"' }
@@ -35,19 +41,21 @@ const InfoSection = ({
           }
         >
           <Grid item gridArea="col1">
-            <Box
-              display="flex"
-              sx={{
-                justifyContent: {
-                  xs: "center",
-                  md: imageFirst ? "left" : "right",
-                },
-              }}
-            >
-              <ImageListItem sx={{ width: { xs: 200, md: 350 } }}>
-                <img src={require(`../../assets/${img}`)} alt={title} />
-              </ImageListItem>
-            </Box>
+            <div data-aos={imageFirst ? "fade-right" : "fade-left"}>
+              <Box
+                display="flex"
+                sx={{
+                  justifyContent: {
+                    xs: "center",
+                    md: imageFirst ? "left" : "right",
+                  },
+                }}
+              >
+                <ImageListItem sx={{ width: { xs: 200, md: 350 } }}>
+                  <img src={require(`../../assets/${img}`)} alt={title} />
+                </ImageListItem>
+              </Box>
+            </div>
           </Grid>
           <Grid item gridArea="col2">
             <Box
@@ -56,39 +64,53 @@ const InfoSection = ({
               height="100%"
               justifyContent="center"
             >
-              <Typography
-                variant="h6"
-                color="textSecondary"
-                sx={{
-                  textAlign: { xs: "center", md: "left" },
-                  mt: { xs: 2, md: 0 },
-                }}
-              >
-                {title}
-              </Typography>
-              <Typography
-                variant="h5"
-                color={backgroundBlue ? "common.white" : "common.black"}
-                mt={1}
-                mb={2}
-                sx={{ textAlign: { xs: "center", md: "left" } }}
-              >
-                {subtitle}
-              </Typography>
-              <Typography
-                variant="body1"
-                color={backgroundBlue ? "common.white" : "common.black"}
-                sx={{ textAlign: { xs: "center", md: "left" } }}
-              >
-                {text}
-              </Typography>
-              <Button
-                variant="contained"
-                color={buttonWhite ? "info" : "secondary"}
-                sx={{ mt: 3, width: { md: "fit-content" } }}
-              >
-                Saiba Mais
-              </Button>
+              <div data-aos={imageFirst ? "fade-left" : "fade-right"}>
+                <Typography
+                  variant="h6"
+                  color="textSecondary"
+                  sx={{
+                    textAlign: { xs: "center", md: "left" },
+                    mt: { xs: 2, md: 0 },
+                    textShadow: backgroundBlue
+                      ? "0px 0px 2px #3D3C3C"
+                      : undefined,
+                  }}
+                >
+                  {title}
+                </Typography>
+                <Typography
+                  variant="h5"
+                  color={backgroundBlue ? "common.white" : "common.black"}
+                  mt={1}
+                  mb={2}
+                  sx={{ textAlign: { xs: "center", md: "left" } }}
+                >
+                  {subtitle}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color={backgroundBlue ? "common.white" : "common.black"}
+                  sx={{ textAlign: { xs: "center", md: "left" } }}
+                >
+                  {text}
+                </Typography>
+
+                <Link
+                  to={href}
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  {" "}
+                  <Button
+                    variant="contained"
+                    color={buttonWhite ? "info" : "secondary"}
+                    sx={{ mt: 3, width: { md: "fit-content", xs: "100%" } }}
+                  >
+                    Saiba Mais
+                  </Button>
+                </Link>
+              </div>
             </Box>
           </Grid>
         </Grid>

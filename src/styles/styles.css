@@ -12,15 +12,17 @@
     height: 100%;
 }
 
-.slick-prev {
-    left: -40px;
-    z-index: 1000;
-}
-.slick-next {
-    right: -40px;
-    z-index: 1000;
-}
-
 .slick-dots li.slick-active button:before {
     color: #1893c6;
 }
+
+.customizeArrow .slick-prev {
+    left: 40px;
+    z-index: 1000;
+}
+
+.customizeArrow .slick-next {
+    right: 40px;
+    z-index: 1000;
+}
+

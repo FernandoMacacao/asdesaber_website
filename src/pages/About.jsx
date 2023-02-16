@@ -18,10 +18,11 @@ import CardSection from "../components/CardSection";
 import Caroussel from "../components/About/Caroussel";
 import Footer from "../components/Footer";
 import SectionHeader from "../components/SectionHeader";
+import PhraseBanner from "../components/PhraseBanner";
 
 const members = [
-  ["Marta Rodrigues", "Gestora Financeira", "member_1.jpg"],
-  ["Paula Gonçalves", "Gestora Pedagógica e de Formação", "member_2.jpg"],
+  ["Marta Rodrigues", "Gestora Financeira", "member_1.png"],
+  ["Paula Gonçalves", "Gestora Pedagógica e de Formação", "member_2.png"],
   ["Sandra Seixas", "Assessora Administrativa", "member_3.jpg"],
 ];
 
@@ -39,6 +40,7 @@ const About = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
+      <PhraseBanner text="Uma equipa formada por professores certificados" />
       <Box mt={10}>
         <Container maxWidth="lg">
           <SectionHeader

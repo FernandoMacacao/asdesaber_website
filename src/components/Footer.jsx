@@ -35,122 +35,137 @@ const contacts = [
 
 const Footer = () => {
   return (
-    <Box p={5} sx={{ backgroundColor: "common.black" }}>
-      <Container maxWidth="lg">
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6} lg={3}>
-            <Box
-              height="100%"
-              display="flex"
-              alignItems="center"
-              justifyContent={{ xs: "center", lg: "flex-start" }}
-            >
-              <img src={Logo} alt="Logo Ás de Saber" width="100px" />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems={{ xs: "center", lg: "flex-start" }}
-              mt={{ xs: 5, md: 0 }}
-            >
-              <Typography
-                variant="body2"
-                color="common.white"
-                fontWeight={700}
-                mb={2}
+    <>
+      <Box p={5} sx={{ backgroundColor: "common.black" }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3} lg={3}>
+              <Box
+                height="100%"
+                display="flex"
+                alignItems="center"
+                justifyContent={{ xs: "center", md: "flex-start" }}
               >
-                Links
-              </Typography>
-              {pages.map((page, id) => (
-                <Link
-                  key={id}
-                  to={pageRef[id]}
-                  style={{ textDecoration: "none", marginBottom: "5px" }}
+                <img src={Logo} alt="Logo Ás de Saber" width="100px" />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems={{ xs: "center", md: "flex-start" }}
+                mt={{ xs: 5, md: 0 }}
+              >
+                <Typography
+                  variant="body2"
+                  color="common.white"
+                  fontWeight={700}
+                  mb={2}
                 >
-                  <Typography variant="body2" color="common.white">
-                    {page}
-                  </Typography>
-                </Link>
-              ))}
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems={{ xs: "center", lg: "flex-start" }}
-              mt={{ xs: 5, md: 0 }}
-            >
-              <Typography
-                variant="body2"
-                color="common.white"
-                fontWeight={700}
-                mb={2}
-              >
-                Redes Sociais
-              </Typography>
-              {socialMedia.map((sm, id) => (
-                <Link
-                  key={id}
-                  to={sm[2]}
-                  style={{
-                    textDecoration: "none",
-                    display: "flex",
-                    flexDirection: "row",
-                    marginBottom: "5px",
-                  }}
-                >
-                  <img
-                    src={require(`../assets/${sm[0]}`)}
-                    alt={sm[1]}
-                    width="20px"
-                  />
-                  <Typography variant="body2" color="common.white" ml={0.5}>
-                    {sm[1]}
-                  </Typography>
-                </Link>
-              ))}
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems={{ xs: "center", lg: "flex-start" }}
-              mt={{ xs: 5, md: 0 }}
-            >
-              <Typography
-                variant="body2"
-                color="common.white"
-                fontWeight={700}
-                mb={2}
-              >
-                Contactos
-              </Typography>
-              {contacts.map((contact, id) => (
-                <Box key={id} display="flex" mb="5px">
-                  <img
-                    src={require(`../assets/${contact[0]}`)}
-                    alt={contact[1]}
-                    width="20px"
-                  />
-                  <Typography
-                    variant="body2"
-                    color="common.white"
-                    ml={0.5}
-                    textAlign={{ xs: "center", md: "left" }}
+                  Links
+                </Typography>
+                {pages.map((page, id) => (
+                  <Link
+                    key={id}
+                    to={pageRef[id]}
+                    style={{ textDecoration: "none", marginBottom: "5px" }}
                   >
-                    {contact[1]}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
+                    <Typography variant="body2" color="common.white">
+                      {page}
+                    </Typography>
+                  </Link>
+                ))}
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems={{ xs: "center", md: "flex-start" }}
+                mt={{ xs: 5, md: 0 }}
+              >
+                <Typography
+                  variant="body2"
+                  color="common.white"
+                  fontWeight={700}
+                  mb={2}
+                >
+                  Redes Sociais
+                </Typography>
+                {socialMedia.map((sm, id) => (
+                  <Link
+                    key={id}
+                    to={sm[2]}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      flexDirection: "row",
+                      marginBottom: "5px",
+                    }}
+                  >
+                    <img
+                      src={require(`../assets/${sm[0]}`)}
+                      alt={sm[1]}
+                      width="20px"
+                    />
+                    <Typography variant="body2" color="common.white" ml={0.5}>
+                      {sm[1]}
+                    </Typography>
+                  </Link>
+                ))}
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems={{ xs: "center", md: "flex-start" }}
+                mt={{ xs: 5, md: 0 }}
+              >
+                <Typography
+                  variant="body2"
+                  color="common.white"
+                  fontWeight={700}
+                  mb={2}
+                >
+                  Contactos
+                </Typography>
+                {contacts.map((contact, id) => (
+                  <Box key={id} display="flex" mb="5px">
+                    <img
+                      src={require(`../assets/${contact[0]}`)}
+                      alt={contact[1]}
+                      width="20px"
+                    />
+                    <Typography
+                      variant="body2"
+                      color="common.white"
+                      ml={0.5}
+                      textAlign={{ xs: "center", md: "left" }}
+                    >
+                      {contact[1]}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+      <Box backgroundColor="#3D3C3C" p={0.5}>
+        <Container maxWidth="lg">
+          <Typography
+            variant="body1"
+            fontSize="0.875rem"
+            color="common.white"
+            textAlign="center"
+          >
+            2023 © All rights reserved - Ás de Saber - explicações e formação -
+            Parque das Nações, Lisboa
+          </Typography>
+        </Container>
+      </Box>
+    </>
   );
 };
 

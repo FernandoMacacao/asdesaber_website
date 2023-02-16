@@ -3,8 +3,15 @@ import { ThemeProvider } from '@mui/material';
 import { theme } from './styles/Theme'
 import Navbar from "./components/Navbar"
 import { Home, Tutoring, Courses, Support, Graduation, About, Contacts } from './pages/index'
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <Router>

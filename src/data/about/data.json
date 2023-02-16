@@ -11,6 +11,8 @@
     "Plans": [
         {
             "title": "Missão",
+            "hasSubtitle": false,
+            "subtitle": "",
             "icon": "mission_icon.svg",
             "hasText": true,
             "text": "Contribuir de forma decisiva para a formação e o sucesso académico e profissional de quem nos procura é a principal missão assumida por toda a equipa.",
@@ -24,6 +26,8 @@
         },
         {
             "title": "Valores",
+            "hasSubtitle": false,
+            "subtitle": "",
             "icon": "values_icon.svg",
             "hasText": false,
             "text": "",
@@ -37,6 +41,8 @@
         },
         {
             "title": "Visão",
+            "hasSubtitle": false,
+            "subtitle": "",
             "icon": "vision_icon.svg",
             "hasText": true,
             "text": "Criar uma comunidade de conhecimento desmistificando que o sucesso individual se alcança com empenho, disciplina e motivação para o seu objetivo individual.",

@@ -23,6 +23,9 @@ export const theme = createTheme({
             dark: '#d1d1d1',
             contrastText: '#fe860c'
         },
+        success: {
+            main: "#080f25"
+        },
         // black and orange colors for text
         text: {
             primary: '#080f25',

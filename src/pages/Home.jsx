@@ -12,6 +12,7 @@ import MessageForm from "../components/MessageForm";
 import Footer from "../components/Footer";
 import SendMessageImg from "../assets/send_message.png";
 import SectionHeader from "../components/SectionHeader";
+import PhraseBanner from "../components/PhraseBanner";
 
 const cards = [
   [
@@ -69,56 +70,60 @@ const Home = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
-      {/* INSERIR BANNER FRASE */}
+      <PhraseBanner text="18 anos de experiência ao serviço do êxito académico e profissional" />
       <Box mt={10} display="flex">
         <Container maxWidth="lg">
-          <SectionHeader
-            title="Os nossos serviços"
-            subtitle="Conheça o que temos para lhe oferecer"
-          />
-          <Grid container rowSpacing={0} columnSpacing={3}>
-            {cards.map((card, id) => (
-              <Grid key={id} item xs={12} md={4}>
-                <Card sx={{ backgroundColor: "common.white", height: "100%" }}>
-                  <Link
-                    to={card[3]}
-                    style={{ textDecoration: "none", color: "inherit" }}
+          <div data-aos="zoom-in">
+            <SectionHeader
+              title="Os nossos serviços"
+              subtitle="Conheça o que temos para lhe oferecer"
+            />
+            <Grid container rowSpacing={{ xs: 3, md: 0 }} columnSpacing={3}>
+              {cards.map((card, id) => (
+                <Grid key={id} item xs={12} md={4}>
+                  <Card
+                    sx={{ backgroundColor: "common.white", height: "100%" }}
                   >
-                    <CardActionArea sx={{ height: "100%" }}>
-                      <CardContent>
-                        <Box
-                          display="flex"
-                          flexDirection="column"
-                          alignItems="center"
-                        >
-                          <img
-                            src={require(`../assets/${card[0]}`)}
-                            alt={`Icon ${card[1]}`}
-                            width={50}
-                          />
-                          <Typography
-                            variant="h6"
-                            color="common.black"
-                            textTransform="none"
-                            textAlign="center"
+                    <Link
+                      to={card[3]}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <CardActionArea sx={{ height: "100%" }}>
+                        <CardContent>
+                          <Box
+                            display="flex"
+                            flexDirection="column"
+                            alignItems="center"
                           >
-                            {card[1]}
-                          </Typography>
-                          <Typography
-                            variant="body1"
-                            color="common.black"
-                            textAlign="center"
-                          >
-                            {card[2]}
-                          </Typography>
-                        </Box>
-                      </CardContent>
-                    </CardActionArea>
-                  </Link>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                            <img
+                              src={require(`../assets/${card[0]}`)}
+                              alt={`Icon ${card[1]}`}
+                              width={50}
+                            />
+                            <Typography
+                              variant="h6"
+                              color="common.black"
+                              textTransform="none"
+                              textAlign="center"
+                            >
+                              {card[1]}
+                            </Typography>
+                            <Typography
+                              variant="body1"
+                              color="common.black"
+                              textAlign="center"
+                            >
+                              {card[2]}
+                            </Typography>
+                          </Box>
+                        </CardContent>
+                      </CardActionArea>
+                    </Link>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </div>
         </Container>
       </Box>
       <InfoSection
@@ -127,6 +132,7 @@ const Home = () => {
         text={Data.Section1.text}
         img={Data.Section1.img}
         buttonWhite={Data.Section1.buttonWhite}
+        href={Data.Section1.href}
         imageFirst={Data.Section1.imageFirst}
         backgroundBlue={Data.Section1.backgroundBlue}
       />
@@ -136,6 +142,7 @@ const Home = () => {
         text={Data.Section2.text}
         img={Data.Section2.img}
         buttonWhite={Data.Section2.buttonWhite}
+        href={Data.Section2.href}
         imageFirst={Data.Section2.imageFirst}
         backgroundBlue={Data.Section2.backgroundBlue}
       />
