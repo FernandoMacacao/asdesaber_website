@@ -14,6 +14,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import Footer from "../components/Footer";
+import OvPDF from "../assets/pdf_ov.pdf";
+import { Link } from "react-router-dom";
 
 const Support = () => {
   const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
@@ -75,13 +77,19 @@ const Support = () => {
                 </Button>
               </Grid>
               <Grid item>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  fullWidth={isFullWidth}
+                <Link
+                  to={OvPDF}
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
                 >
-                  Orientação Vocacional
-                </Button>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    fullWidth={isFullWidth}
+                  >
+                    Orientação Vocacional
+                  </Button>
+                </Link>
               </Grid>
             </Grid>
           </Box>

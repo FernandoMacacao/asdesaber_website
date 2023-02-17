@@ -38,17 +38,23 @@ const Courses = ({ title, subtitle, courses }) => {
               maxWidth="lg"
               sx={{
                 display: "flex",
-                justifyContent: "center",
               }}
             >
-              <Box display="flex" flexDirection="row" alignItems="center">
-                <img
-                  src={require(`../assets/${course.icon}`)}
-                  alt={course.title}
-                  style={{
-                    marginRight: 30,
-                  }}
-                />
+              <Box
+                display="flex"
+                flexDirection="row"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Box>
+                  <img
+                    src={require(`../assets/${course.icon}`)}
+                    alt={course.title}
+                    style={{
+                      marginRight: 30,
+                    }}
+                  />
+                </Box>
                 <Box>
                   <Typography
                     variant="h6"

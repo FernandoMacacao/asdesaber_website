@@ -12,12 +12,9 @@ import { Box } from "@mui/material";
 
 const Contacts = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
-  const center = useMemo(
-    () => ({ lat: 38.778681668006534, lng: -9.09668969386543 }),
-    []
-  );
+  const center = useMemo(() => ({ lat: 38.77871, lng: -9.09625 }), []);
 
   return (
     <>
