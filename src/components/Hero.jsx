@@ -39,14 +39,14 @@ const Hero = ({
         backgroundSize: "cover",
         backgroundPosition: "center",
         maxWidth: "100vw",
-        height: "100vh",
+        minHeight: "100vh",
         mt: { md: 8, xs: 7 },
       }}
     >
       <Container maxWidth="lg" sx={{ height: "100%" }}>
         <Box
           display="flex"
-          height="100%"
+          minHeight="100vh"
           flexDirection="column"
           justifyContent="center"
           alignItems={{ xs: "center", md: "flex-start" }}

@@ -15,7 +15,11 @@ const Contacts = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
-  const center = useMemo(() => ({ lat: 38.77871, lng: -9.09625 }), []);
+
+  const center = useMemo(
+    () => ({ lat: 38.77868168090565, lng: -9.096689988635774 }),
+    []
+  );
 
   return (
     <>
