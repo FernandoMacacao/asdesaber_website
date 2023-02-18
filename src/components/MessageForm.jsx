@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Typography from "@mui/material/Typography";
 import { useFormik } from "formik";
 import {
@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import * as yup from "yup";
 import DOMPurify from "dompurify";
+import emailjs from "@emailjs/browser";
 
 const subjects = [
   "Explicações",
@@ -58,11 +59,27 @@ const schema = yup.object().shape({
     .required("Por favor insira o corpo da mensagem."),
 });
 
-const onSubmit = () => {
-  console.log("Submitted");
-};
-
 const MessageForm = ({ shadow }) => {
+  const form = useRef();
+
+  const onSubmit = () => {
+    emailjs
+      .sendForm(
+        "service_wvud6d6",
+        "template_y33qp9k",
+        form.current,
+        "q1XDbHQY1b3PiZGHO"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   const [subject, setSubject] = useState("");
@@ -95,6 +112,7 @@ const MessageForm = ({ shadow }) => {
       display="flex"
       alignItems="center"
       component="form"
+      ref={form}
       onSubmit={handleSubmit}
       noValidate
       autoComplete="off"
@@ -160,7 +178,7 @@ const MessageForm = ({ shadow }) => {
           <Grid item xs={12} md={6} mt={{ xs: 1, md: 0 }}>
             <TextField
               type="phone"
-              id="phone"
+              name="phone"
               label="Telemóvel"
               variant="outlined"
               value={values.phone}
