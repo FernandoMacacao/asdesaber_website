@@ -19,6 +19,7 @@ const Graduation = () => {
 
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         title={Data.Hero.title}
         subtitle={Data.Hero.subtitle}
@@ -28,12 +29,14 @@ const Graduation = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
+      {/* GRADUATION AREAS SECTION */}
       <Areas
         title="As Nossas Áreas De Formação Certificadas"
         subtitle="Conheça as nossas soluções para o seu desenvolvimento"
         cards={Data.Cards}
         hasLink={false}
       />
+      {/* BANNER */}
       <Box
         sx={{
           backgroundImage: `url(${Banner})`,
@@ -83,6 +86,7 @@ const Graduation = () => {
           </Box>
         </Container>
       </Box>
+      {/* FOOTER */}
       <Footer />
     </>
   );

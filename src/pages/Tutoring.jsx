@@ -12,6 +12,7 @@ import ESADLogo from "../assets/logo_ESAD.png";
 const Tutoring = () => {
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         title={Data.Hero.title}
         subtitle={Data.Hero.subtitle}
@@ -21,11 +22,13 @@ const Tutoring = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
+      {/* PLANS SECTION */}
       <CardSection
         title="Os Nossos planos"
         subtitle="Escolha o plano ideal para o ajudar a alcançar os seus objetivos académicos"
         plans={Data.Plans}
       />
+      {/* BANNER */}
       <Box
         sx={{
           backgroundImage: `url(${Banner})`,
@@ -64,13 +67,16 @@ const Tutoring = () => {
           </Box>
         </Container>
       </Box>
+      {/* STUDY AREAS SECTION */}
       <Areas
         title="As nossas áreas de estudo"
         subtitle="Conheça as nossas amplas opções de ensino"
         cards={Data.Cards}
         hasLink={true}
       />
+      {/* PRICE SIMULATOR */}
       <Simulator />
+      {/* FOOTER */}
       <Footer />
     </>
   );

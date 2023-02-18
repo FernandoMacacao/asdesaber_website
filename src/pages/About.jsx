@@ -20,17 +20,12 @@ import Footer from "../components/Footer";
 import SectionHeader from "../components/SectionHeader";
 import PhraseBanner from "../components/PhraseBanner";
 
-const members = [
-  ["Marta Rodrigues", "Gestora Financeira", "member_1.png"],
-  ["Paula Gonçalves", "Gestora Pedagógica e de Formação", "member_2.png"],
-  ["Sandra Seixas", "Assessora Administrativa", "member_3.jpeg"],
-];
-
 const About = () => {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         title={Data.Hero.title}
         subtitle={Data.Hero.subtitle}
@@ -40,7 +35,9 @@ const About = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
+      {/* BANNER */}
       <PhraseBanner text="Uma equipa formada por professores certificados" />
+      {/* HISTORY SECTION */}
       <Box mt={10}>
         <Container maxWidth="lg">
           <SectionHeader
@@ -56,6 +53,7 @@ const About = () => {
           </Box>
         </Container>
       </Box>
+      {/* TEAM SECTION */}
       <Box mt={10} py={10} backgroundColor="#1893c6">
         <Container maxWidth="lg">
           <SectionHeader
@@ -64,13 +62,13 @@ const About = () => {
             white
           />
           <Grid display="flex" container justifyContent="center" spacing={3}>
-            {members.map((member, id) => (
+            {Data.Members.map((member, id) => (
               <Grid key={id} item xs={12} md={3}>
                 <Card sx={{ backgroundColor: "common.white", height: "100%" }}>
                   <CardMedia
                     component="img"
-                    image={require(`../assets/${member[2]}`)}
-                    alt={member[0]}
+                    image={require(`../assets/${member.img}`)}
+                    alt={member.name}
                     height={400}
                   />
                   <CardContent>
@@ -80,14 +78,14 @@ const About = () => {
                       color="primary"
                       textAlign="center"
                     >
-                      {member[0]}
+                      {member.name}
                     </Typography>
                     <Typography
                       variant="body1"
                       color="common.black"
                       textAlign="center"
                     >
-                      {member[1]}
+                      {member.job}
                     </Typography>
                   </CardContent>
                 </Card>
@@ -96,6 +94,7 @@ const About = () => {
           </Grid>
         </Container>
       </Box>
+      {/* MISSON/VALUES/VISION SECTION */}
       <Box py={10} backgroundColor="#E6E6E6">
         <Container maxWidth="lg">
           <Box
@@ -141,7 +140,9 @@ const About = () => {
           <CardSection title="" subtitle="" plans={Data.Plans} />
         </Container>
       </Box>
+      {/* IMAGES CAROUSSELL SECTION */}
       <Caroussel />
+      {/* FOOTER */}
       <Footer />
     </>
   );

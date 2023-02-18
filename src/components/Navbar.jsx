@@ -14,23 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import LinkWithScroll, { NavLinkWithScroll } from "./LinkWithScroll";
 import logo from "../assets/logo.png";
-
-const pages = [
-  "Início",
-  "Explicações",
-  "Apoio Psicopedagógico",
-  "Formação",
-  "Sobre Nós",
-  "Contactos",
-];
-const pageRef = [
-  "/",
-  "explicacoes",
-  "apoio",
-  "formacao",
-  "sobrenos",
-  "contactos",
-];
+import Data from "../data/pages.json";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -81,27 +65,27 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page, id) => (
+              {Data.Links.map((page) => (
                 <NavLinkWithScroll
-                  key={id}
-                  to={pageRef[id]}
+                  key={page.name}
+                  to={page.href}
                   style={{ color: "#080F25", textDecoration: "none" }}
                 >
                   {({ isActive }) =>
                     isActive ? (
-                      <MenuItem key={page} onClick={handleCloseNavMenu}>
+                      <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                         <Typography
                           textAlign="center"
                           variant="body2"
                           color="primary"
                         >
-                          {page}
+                          {page.name}
                         </Typography>
                       </MenuItem>
                     ) : (
-                      <MenuItem key={page} onClick={handleCloseNavMenu}>
+                      <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                         <Typography textAlign="center" variant="body2">
-                          {page}
+                          {page.name}
                         </Typography>
                       </MenuItem>
                     )
@@ -129,10 +113,10 @@ function Navbar() {
               justifyContent: "center",
             }}
           >
-            {pages.map((page, id) => (
+            {Data.Links.map((page) => (
               <NavLinkWithScroll
-                key={page}
-                to={pageRef[id]}
+                key={page.name}
+                to={page.href}
                 onClick={handleCloseNavMenu}
                 style={{ my: 2, display: "block", textDecoration: "none" }}
               >
@@ -153,10 +137,10 @@ function Navbar() {
                         },
                       }}
                     >
-                      {page}
+                      {page.name}
                     </Button>
                   ) : (
-                    <Button sx={{ color: "#080F25" }}>{page}</Button>
+                    <Button sx={{ color: "#080F25" }}>{page.name}</Button>
                   )
                 }
               </NavLinkWithScroll>

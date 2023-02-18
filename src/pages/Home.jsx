@@ -14,53 +14,10 @@ import SendMessageImg from "../assets/send_message.png";
 import SectionHeader from "../components/SectionHeader";
 import PhraseBanner from "../components/PhraseBanner";
 
-const cards = [
-  [
-    "tutoring.svg",
-    "Explicações",
-    "As nossas explicações são desenhadas e adaptadas a cada aluno dentro das várias modalidades que oferecemos.",
-    "/explicacoes",
-  ],
-  [
-    "support.svg",
-    "Apoio Psicopedagógico",
-    "Temos parcerias com equipas de psicólogos que trabalham na área do autoconhecimento e da aprendizagem.",
-    "/apoio",
-  ],
-  [
-    "graduation.svg",
-    "Formação",
-    "Somos uma empresa certificada na área da formação.",
-    "/formacao",
-  ],
-];
-
-const testimonials = [
-  [
-    "Dina Alexandre",
-    "“Saliento com grande satisfação a qualidade e competências dos professores, preocupados em entender as necessidades dos alunos e adequar os métodos de estudo, com visibilidade nos resultados alcançados. Recomendo a quem necessite de apoio.“",
-  ],
-  [
-    "Ricardo Branco",
-    "“Tem muito bons professores, é limpinho e muito bom para aprender; além de me melhorar as notas fiz muitos amigos. se também queres amigos devias vir experimentar! Não te vais arrepender! Contamos contigo e boas explicações!”",
-  ],
-  [
-    "Bernardo Nunes",
-    "“Centro de explicações ótimo. Toda gente ali é super simpática, sim toda a gente. Os professores são ótimos. A staff é maravilhosa e super atenciosa. E sim eles realmente querem saber sobre vocês e como vão tanto em termos académicos como pessoais...”",
-  ],
-  [
-    "Lilibeth Abrantes",
-    "“Tem muito bons professores, é limpinho e muito bom para aprender; além de me melhorar as notas fiz muitos amigos. se também queres amigos devias vir experimentar! Não te vais arrepender! Contamos contigo e boas explicações!”",
-  ],
-  [
-    "Marta Dourado",
-    "“Centro de estudo fantástico. Pessoas maravilhosas que fazem tudo para ajudar o aluno da melhor forma possível. Recomendo muito.”",
-  ],
-];
-
 const Home = () => {
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         title={Data.Hero.title}
         subtitle={Data.Hero.subtitle}
@@ -70,7 +27,9 @@ const Home = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
+      {/* BANNER */}
       <PhraseBanner text="18 anos de experiência ao serviço do êxito académico e profissional" />
+      {/* SERVICES SECTION */}
       <Box mt={10} display="flex">
         <Container maxWidth="lg">
           <div data-aos="zoom-in">
@@ -79,13 +38,13 @@ const Home = () => {
               subtitle="Conheça o que temos para lhe oferecer"
             />
             <Grid container rowSpacing={{ xs: 3, md: 0 }} columnSpacing={3}>
-              {cards.map((card, id) => (
+              {Data.Cards.map((card, id) => (
                 <Grid key={id} item xs={12} md={4}>
                   <Card
                     sx={{ backgroundColor: "common.white", height: "100%" }}
                   >
                     <LinkWithScroll
-                      to={card[3]}
+                      to={card.href}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       <CardActionArea sx={{ height: "100%" }}>
@@ -96,8 +55,8 @@ const Home = () => {
                             alignItems="center"
                           >
                             <img
-                              src={require(`../assets/${card[0]}`)}
-                              alt={`Icon ${card[1]}`}
+                              src={require(`../assets/${card.icon}`)}
+                              alt={`Icon ${card.title}`}
                               width={50}
                             />
                             <Typography
@@ -106,14 +65,14 @@ const Home = () => {
                               textTransform="none"
                               textAlign="center"
                             >
-                              {card[1]}
+                              {card.title}
                             </Typography>
                             <Typography
                               variant="body1"
                               color="common.black"
                               textAlign="center"
                             >
-                              {card[2]}
+                              {card.text}
                             </Typography>
                           </Box>
                         </CardContent>
@@ -126,6 +85,7 @@ const Home = () => {
           </div>
         </Container>
       </Box>
+      {/* TUTORING SECTION */}
       <InfoSection
         title={Data.Section1.title}
         subtitle={Data.Section1.subtitle}
@@ -136,6 +96,7 @@ const Home = () => {
         imageFirst={Data.Section1.imageFirst}
         backgroundBlue={Data.Section1.backgroundBlue}
       />
+      {/* ONLINE TUTORING SECTION */}
       <InfoSection
         title={Data.Section2.title}
         subtitle={Data.Section2.subtitle}
@@ -146,7 +107,9 @@ const Home = () => {
         imageFirst={Data.Section2.imageFirst}
         backgroundBlue={Data.Section2.backgroundBlue}
       />
-      <Testimonials testimonials={testimonials} />
+      {/* TESTIMONIALS SECTION */}
+      <Testimonials testimonials={Data.Testimonials} />
+      {/* FORM SECTION */}
       <Grid container spacing={0} my={10}>
         <Grid item xs={12} md={6}>
           <div data-aos="fade-right" style={{ height: "100%" }}>
@@ -168,6 +131,7 @@ const Home = () => {
           </div>
         </Grid>
       </Grid>
+      {/* FOOTER */}
       <Footer />
     </>
   );

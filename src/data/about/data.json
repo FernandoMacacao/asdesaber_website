@@ -1,58 +1,81 @@
 {
-    "Hero": {
-        "title": "Quem Somos",
-        "subtitle": "Somos uma equipa unida pela paixão do ensino e interesse por ajudar cada aluno na superação das suas dificuldades específicas e alcançar a meta que definiu para si.",
-        "img": "hero_about.png",
-        "noButton": true,
-        "singleButton": false,
-        "firstButton": "",
-        "secondButton": ""
+  "Hero": {
+    "title": "Quem Somos",
+    "subtitle": "Somos uma equipa unida pela paixão do ensino e interesse por ajudar cada aluno na superação das suas dificuldades específicas e alcançar a meta que definiu para si.",
+    "img": "hero_about.png",
+    "noButton": true,
+    "singleButton": false,
+    "firstButton": "",
+    "secondButton": ""
+  },
+  "Members": [
+    {
+      "name": "Marta Rodrigues",
+      "job": "Gestora Financeira",
+      "img": "member_1.png"
     },
-    "Plans": [
-        {
-            "title": "Missão",
-            "hasSubtitle": false,
-            "subtitle": "",
-            "icon": "mission_icon.svg",
-            "hasText": true,
-            "text": "Contribuir de forma decisiva para a formação e o sucesso académico e profissional de quem nos procura é a principal missão assumida por toda a equipa.",
-            "hasLinkText": false,
-            "linkText": "",
-            "href": "",
-            "hasChecks": false,
-            "checks": [""],
-            "hasX": false,
-            "x": [""]
-        },
-        {
-            "title": "Valores",
-            "hasSubtitle": false,
-            "subtitle": "",
-            "icon": "values_icon.svg",
-            "hasText": false,
-            "text": "",
-            "hasLinkText": false,
-            "linkText": "",
-            "href": "",
-            "hasChecks": true,
-            "checks": ["Inovação", "Valorização das Pessoas", "Atitude de Excelência", "Compromisso com Resultados", "Responsabilidade Social"],
-            "hasX": false,
-            "x": [""]
-        },
-        {
-            "title": "Visão",
-            "hasSubtitle": false,
-            "subtitle": "",
-            "icon": "vision_icon.svg",
-            "hasText": true,
-            "text": "Criar uma comunidade de conhecimento desmistificando que o sucesso individual se alcança com empenho, disciplina e motivação para o seu objetivo individual.",
-            "hasLinkText": false,
-            "linkText": "",
-            "href": "",
-            "hasChecks": false,
-            "checks": [""],
-            "hasX": false,
-            "x": [""]
-        }
-    ]
+    {
+      "name": "Paula Gonçalves",
+      "job": "Gestora Pedagógica e de Formação",
+      "img": "member_2.png"
+    },
+    {
+      "name": "Sandra Seixas",
+      "job": "Assessora Administrativa",
+      "img": "member_3.jpeg"
+    }
+  ],
+  "Plans": [
+    {
+      "title": "Missão",
+      "hasSubtitle": false,
+      "subtitle": "",
+      "icon": "mission_icon.svg",
+      "hasText": true,
+      "text": "Contribuir de forma decisiva para a formação e o sucesso académico e profissional de quem nos procura é a principal missão assumida por toda a equipa.",
+      "hasLinkText": false,
+      "linkText": "",
+      "href": "",
+      "hasChecks": false,
+      "checks": [""],
+      "hasX": false,
+      "x": [""]
+    },
+    {
+      "title": "Valores",
+      "hasSubtitle": false,
+      "subtitle": "",
+      "icon": "values_icon.svg",
+      "hasText": false,
+      "text": "",
+      "hasLinkText": false,
+      "linkText": "",
+      "href": "",
+      "hasChecks": true,
+      "checks": [
+        "Inovação",
+        "Valorização das Pessoas",
+        "Atitude de Excelência",
+        "Compromisso com Resultados",
+        "Responsabilidade Social"
+      ],
+      "hasX": false,
+      "x": [""]
+    },
+    {
+      "title": "Visão",
+      "hasSubtitle": false,
+      "subtitle": "",
+      "icon": "vision_icon.svg",
+      "hasText": true,
+      "text": "Criar uma comunidade de conhecimento desmistificando que o sucesso individual se alcança com empenho, disciplina e motivação para o seu objetivo individual.",
+      "hasLinkText": false,
+      "linkText": "",
+      "href": "",
+      "hasChecks": false,
+      "checks": [""],
+      "hasX": false,
+      "x": [""]
+    }
+  ]
 }

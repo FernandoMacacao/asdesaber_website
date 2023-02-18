@@ -3,35 +3,7 @@ import Grid from "@mui/material/Grid";
 import Logo from "../assets/logo.png";
 import { Box, Container, Typography } from "@mui/material";
 import LinkWithScroll from "./LinkWithScroll";
-
-const pages = [
-  "Início",
-  "Explicações",
-  "Apoio Psicopedagógico",
-  "Formação",
-  "Sobre Nós",
-  "Contactos",
-];
-const pageRef = [
-  "/",
-  "/explicacoes",
-  "/apoio",
-  "/formacao",
-  "/sobrenos",
-  "/contactos",
-];
-
-const socialMedia = [
-  ["facebook.svg", "Facebook", "https://pt-pt.facebook.com/asdesaber/"],
-  ["instagram.svg", "Instagram", "https://www.instagram.com/asdesaber/"],
-];
-
-const contacts = [
-  ["phone.svg", "218 963 068"],
-  ["phone.svg", "969 754 763"],
-  ["email.svg", "geral@asdesaber.pt"],
-  ["location.svg", "Rua de Moscavide, 16B 1990-162 Lisboa"],
-];
+import Data from "../data/pages.json";
 
 const Footer = () => {
   return (
@@ -64,10 +36,10 @@ const Footer = () => {
                 >
                   Links
                 </Typography>
-                {pages.map((page, id) => (
+                {Data.Links.map((page) => (
                   <LinkWithScroll
-                    key={id}
-                    to={pageRef[id]}
+                    key={page.name}
+                    to={page.href}
                     style={{
                       textDecoration: "none",
                       marginBottom: "5px",
@@ -78,7 +50,7 @@ const Footer = () => {
                       color="common.white"
                       sx={{ "&:hover": { color: "#1893c6" } }}
                     >
-                      {page}
+                      {page.name}
                     </Typography>
                   </LinkWithScroll>
                 ))}
@@ -99,10 +71,10 @@ const Footer = () => {
                 >
                   Redes Sociais
                 </Typography>
-                {socialMedia.map((sm, id) => (
+                {Data.SocialMedia.map((sm) => (
                   <LinkWithScroll
-                    key={id}
-                    to={sm[2]}
+                    key={sm.name}
+                    to={sm.href}
                     style={{
                       textDecoration: "none",
                       display: "flex",
@@ -112,8 +84,8 @@ const Footer = () => {
                     target="_blank"
                   >
                     <img
-                      src={require(`../assets/${sm[0]}`)}
-                      alt={sm[1]}
+                      src={require(`../assets/${sm.icon}`)}
+                      alt={sm.name}
                       width="20px"
                     />
                     <Typography
@@ -122,7 +94,7 @@ const Footer = () => {
                       ml={0.5}
                       sx={{ "&:hover": { color: "#1893c6" } }}
                     >
-                      {sm[1]}
+                      {sm.name}
                     </Typography>
                   </LinkWithScroll>
                 ))}
@@ -143,11 +115,11 @@ const Footer = () => {
                 >
                   Contactos
                 </Typography>
-                {contacts.map((contact, id) => (
-                  <Box key={id} display="flex" mb="5px">
+                {Data.Contacts.map((contact) => (
+                  <Box key={contact.text} display="flex" mb="5px">
                     <img
-                      src={require(`../assets/${contact[0]}`)}
-                      alt={contact[1]}
+                      src={require(`../assets/${contact.icon}`)}
+                      alt={contact.text}
                       width="20px"
                     />
                     <Typography
@@ -156,7 +128,7 @@ const Footer = () => {
                       ml={0.5}
                       textAlign={{ xs: "center", md: "left" }}
                     >
-                      {contact[1]}
+                      {contact.text}
                     </Typography>
                   </Box>
                 ))}

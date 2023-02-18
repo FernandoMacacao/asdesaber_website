@@ -22,6 +22,7 @@ const Support = () => {
 
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         title={Data.Hero.title}
         subtitle={Data.Hero.subtitle}
@@ -31,11 +32,13 @@ const Support = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
+      {/* PLANS SECTION */}
       <CardSection
         title="Psicologia em parceria"
         subtitle="A relevância e contribuição destas áreas para o sucesso pessoal é crucial."
         plans={Data.Plans}
       />
+      {/* BANNER */}
       <Box
         sx={{
           backgroundImage: `url(${Banner})`,
@@ -95,6 +98,7 @@ const Support = () => {
           </Box>
         </Container>
       </Box>
+      {/* PARTNERS SECTION */}
       <Box my={10} display="flex">
         <Container maxWidth="lg">
           <Box>
@@ -130,6 +134,7 @@ const Support = () => {
           </Box>
         </Container>
       </Box>
+      {/* FOOTER */}
       <Footer />
     </>
   );

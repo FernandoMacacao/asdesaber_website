@@ -1,0 +1,58 @@
+{
+  "Links": [
+    {
+      "name": "Início",
+      "href": "/"
+    },
+    {
+      "name": "Explicações",
+      "href": "explicacoes"
+    },
+    {
+      "name": "Apoio Psicopedagógico",
+      "href": "apoio"
+    },
+    {
+      "name": "Formação",
+      "href": "formacao"
+    },
+    {
+      "name": "Sobre Nós",
+      "href": "sobrenos"
+    },
+    {
+      "name": "Contactos",
+      "href": "contactos"
+    }
+  ],
+  "SocialMedia": [
+    {
+      "icon": "facebook.svg",
+      "name": "Facebook",
+      "href": "https://pt-pt.facebook.com/asdesaber/"
+    },
+    {
+      "icon": "instagram.svg",
+      "name": "Instagram",
+      "href": "https://www.instagram.com/asdesaber/"
+    }
+  ],
+  "Contacts": [
+    {
+      "icon": "phone.svg",
+      "text": "218 963 068"
+    },
+    {
+      "icon": "phone.svg",
+      "text": "969 754 763"
+    },
+    {
+      "icon": "email.svg",
+      "text": "geral@asdesaber.pt"
+    },
+    {
+      "icon": "location.svg",
+      "text": "Rua de Moscavide, 16B 1990-162 Lisboa"
+    }
+  ]
+}

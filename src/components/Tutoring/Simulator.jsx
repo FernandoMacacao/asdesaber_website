@@ -6,7 +6,7 @@ import LinkWithScroll from "../LinkWithScroll";
 import SectionHeader from "../SectionHeader";
 import PricePDF from "../../assets/pdf_prices.pdf";
 
-const levels = [
+const LEVELS = [
   "1º ao 8º ano",
   "9º ano",
   "Disciplina sem exame 10º e 11º ano",
@@ -14,7 +14,7 @@ const levels = [
   "Superior",
 ];
 
-const weeklyHours = [
+const WEEKLY_HOURS = [
   [1, "1h"],
   [1.5, "1h30"],
   [2, "2h"],
@@ -22,69 +22,48 @@ const weeklyHours = [
   [3, "3h"],
 ];
 
-const types = ["Online", "Presencial"];
+const TYPES = ["Online", "Presencial"];
 
-const modes = ["Individual", "Grupo"];
+const MODES = ["Individual", "Grupo"];
+
+const PRICES = {
+  [TYPES[0]]: {
+    [MODES[0]]: {
+      [LEVELS[0]]: 23,
+      [LEVELS[1]]: 23,
+      [LEVELS[2]]: 27,
+      [LEVELS[3]]: 30,
+      [LEVELS[4]]: 40,
+    },
+  },
+  [TYPES[1]]: {
+    [MODES[0]]: {
+      [LEVELS[0]]: 24,
+      [LEVELS[1]]: 25,
+      [LEVELS[2]]: 29,
+      [LEVELS[3]]: 32,
+      [LEVELS[4]]: 42,
+    },
+    [MODES[1]]: {
+      [LEVELS[0]]: 18,
+      [LEVELS[1]]: 18,
+      [LEVELS[2]]: 23,
+      [LEVELS[3]]: 25,
+      [LEVELS[4]]: 36,
+    },
+  },
+};
 
 const Simulator = () => {
   const [level, setLevel] = useState("");
   const [hours, setHours] = useState("");
   const [type, setType] = useState("");
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState("Individual");
   const [price, setPrice] = useState(0);
 
   const calculatePrice = () => {
-    if (mode.target.value === "Individual") {
-      switch (level.target.value) {
-        case levels[0]:
-          type === types[0]
-            ? setPrice(23 * hours.target.value * 4)
-            : setPrice(24 * hours.target.value * 4);
-          break;
-        case levels[1]:
-          type === types[0]
-            ? setPrice(23 * hours.target.value * 4)
-            : setPrice(25 * hours.target.value * 4);
-          break;
-        case levels[2]:
-          type === types[0]
-            ? setPrice(27 * hours.target.value * 4)
-            : setPrice(29 * hours.target.value * 4);
-          break;
-        case levels[3]:
-          type === types[0]
-            ? setPrice(30 * hours.target.value * 4)
-            : setPrice(32 * hours.target.value * 4);
-          break;
-        case levels[4]:
-          type === types[0]
-            ? setPrice(40 * hours.target.value * 4)
-            : setPrice(42 * hours.target.value * 4);
-          break;
-        default:
-          break;
-      }
-    } else {
-      switch (level.target.value) {
-        case levels[0]:
-          setPrice(18 * hours.target.value * 4);
-          break;
-        case levels[1]:
-          setPrice(18 * hours.target.value * 4);
-          break;
-        case levels[2]:
-          setPrice(23 * hours.target.value * 4);
-          break;
-        case levels[3]:
-          setPrice(25 * hours.target.value * 4);
-          break;
-        case levels[4]:
-          setPrice(36 * hours.target.value * 4);
-          break;
-        default:
-          break;
-      }
-    }
+    const price = PRICES[type][mode][level];
+    setPrice(price * hours * 4);
   };
 
   return (
@@ -101,9 +80,9 @@ const Simulator = () => {
             id="level"
             label="Nível"
             defaultValue=""
-            onChange={setLevel}
+            onChange={(event) => setLevel(event.target.value)}
           >
-            {levels.map((level, id) => (
+            {LEVELS.map((level, id) => (
               <MenuItem key={id} value={level}>
                 {level}
               </MenuItem>
@@ -115,10 +94,10 @@ const Simulator = () => {
             id="hours"
             label="Horas Semanais"
             defaultValue=""
-            onChange={setHours}
+            onChange={(event) => setHours(event.target.value)}
             sx={{ mt: 2 }}
           >
-            {weeklyHours.map((hours, id) => (
+            {WEEKLY_HOURS.map((hours, id) => (
               <MenuItem key={id} value={hours[0]}>
                 {hours[1]}
               </MenuItem>
@@ -130,10 +109,13 @@ const Simulator = () => {
             id="type"
             label="Modalidade"
             defaultValue=""
-            onChange={(event) => setType(event.target.value)}
+            onChange={(event) => {
+              setType(event.target.value);
+              setMode("Individual");
+            }}
             sx={{ mt: 2 }}
           >
-            {types.map((tp, id) => (
+            {TYPES.map((tp, id) => (
               <MenuItem key={id} value={tp}>
                 {tp}
               </MenuItem>
@@ -145,11 +127,11 @@ const Simulator = () => {
               select
               id="mode"
               label="Tipo"
-              defaultValue=""
-              onChange={setMode}
+              value={mode}
+              onChange={(event) => setMode(event.target.value)}
               sx={{ mt: 2 }}
             >
-              {modes.map((md, id) => (
+              {MODES.map((md, id) => (
                 <MenuItem key={id} value={md}>
                   {md}
                 </MenuItem>
@@ -161,12 +143,7 @@ const Simulator = () => {
             variant="contained"
             color="primary"
             sx={{ mt: 2 }}
-            disabled={
-              type === "" ||
-              level === "" ||
-              hours === "" ||
-              (type === "Presencial" && mode === "")
-            }
+            disabled={type === "" || level === "" || hours === ""}
             onClick={calculatePrice}
           >
             Calcular

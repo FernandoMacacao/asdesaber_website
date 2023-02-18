@@ -85,7 +85,7 @@ const Testimonials = ({ testimonials }) => {
                     fontWeight={400}
                     color="common.white"
                   >
-                    {testimonial[0].charAt(0)}
+                    {testimonial.name.charAt(0)}
                   </Typography>
                 </Box>
                 <CardContent sx={{ px: 0 }}>
@@ -94,10 +94,10 @@ const Testimonials = ({ testimonials }) => {
                     fontWeight={700}
                     color="textPrimary"
                   >
-                    {testimonial[0]}
+                    {testimonial.name}
                   </Typography>
                   <Typography variant="body1" color="textPrimary">
-                    {testimonial[1]}
+                    {testimonial.text}
                   </Typography>
                 </CardContent>
                 <Rating name="read-only" value={5} readOnly sx={{ mt: 2 }} />

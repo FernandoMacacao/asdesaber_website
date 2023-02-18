@@ -18,6 +18,7 @@ const Contacts = () => {
 
   return (
     <>
+      {/* HERO SECTION */}
       <Hero
         title={Data.Hero.title}
         subtitle={Data.Hero.subtitle}
@@ -27,7 +28,7 @@ const Contacts = () => {
         firstButton={Data.Hero.firstButton}
         secondButton={Data.Hero.secondButton}
       />
-      {/* MAPA */}
+      {/* MAP SECTION */}
       <Box mt={10} display="flex">
         <Container maxWidth="lg">
           {!isLoaded ? (
@@ -48,7 +49,9 @@ const Contacts = () => {
         </Container>
       </Box>
       {/* BANNER */}
+      {/* MESSAGE FORM SECTION */}
       <MessageForm />
+      {/* FOOTER */}
       <Footer />
     </>
   );
