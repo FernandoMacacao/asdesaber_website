@@ -43,7 +43,7 @@ const Contacts = () => {
           ) : (
             <>
               <GoogleMap
-                zoom={18}
+                zoom={19}
                 center={center}
                 mapContainerClassName="map-container"
               >
