@@ -23,7 +23,7 @@ import PhraseBanner from "../components/PhraseBanner";
 const members = [
   ["Marta Rodrigues", "Gestora Financeira", "member_1.png"],
   ["Paula Gonçalves", "Gestora Pedagógica e de Formação", "member_2.png"],
-  ["Sandra Seixas", "Assessora Administrativa", "member_3.jpg"],
+  ["Sandra Seixas", "Assessora Administrativa", "member_3.jpeg"],
 ];
 
 const About = () => {

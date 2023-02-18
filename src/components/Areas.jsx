@@ -20,8 +20,7 @@ const Areas = ({ title, subtitle, cards, hasLink }) => {
                 key={id}
                 item
                 xs={12}
-                md={6}
-                lg={4}
+                md={4}
                 display="flex"
                 justifyContent="center"
               >

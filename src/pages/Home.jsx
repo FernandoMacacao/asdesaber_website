@@ -149,19 +149,23 @@ const Home = () => {
       <Testimonials testimonials={testimonials} />
       <Grid container spacing={0} my={10}>
         <Grid item xs={12} md={6}>
-          <img
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-            src={SendMessageImg}
-            alt="send message"
-          />
+          <div data-aos="fade-right" style={{ height: "100%" }}>
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              src={SendMessageImg}
+              alt="send message"
+            />
+          </div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <MessageForm shadow />
+          <div data-aos="fade-left" style={{ height: "100%" }}>
+            <MessageForm shadow />
+          </div>
         </Grid>
       </Grid>
       <Footer />

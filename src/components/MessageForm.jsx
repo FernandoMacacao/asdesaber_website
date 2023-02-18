@@ -11,6 +11,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import * as yup from "yup";
+import DOMPurify from "dompurify";
 
 const subjects = [
   "Explicações",
@@ -21,29 +22,40 @@ const subjects = [
 
 const PHONE_REGEX = "^(9[1236][0-9]) ?([0-9]{3}) ?([0-9]{3})$";
 
+const sanitize = (value) => {
+  return DOMPurify.sanitize(value);
+};
+
 const schema = yup.object().shape({
   firstName: yup.string().required("Por favor insira o seu primeiro nome."),
   lastName: yup.string().required("Por favor insira o seu último nome."),
   email: yup
     .string()
+    .transform(sanitize)
     .email("Por favor insira um email válido.")
     .required("Por favor insira o seu email."),
   phone: yup
     .string()
+    .transform(sanitize)
     .matches(PHONE_REGEX, { message: "Por favor insira um número válido." }),
   subject: yup
     .string()
+    .transform(sanitize)
     .oneOf(["Explicações", "Estudo Acompanhado", "Cursos Intensivos", "Outro"])
     .required("Por favor insira um assunto."),
   subject2: yup.string().when("subject", {
     is: "Outro",
     then: yup
       .string()
+      .transform(sanitize)
       .max(20, { message: "Por favor insira no máximo 20 caracteres." })
       .required("Por favor insira um assunto."),
     otherwise: yup.string().notRequired(),
   }),
-  body: yup.string().required("Por favor insira o corpo da mensagem."),
+  body: yup
+    .string()
+    .transform(sanitize)
+    .required("Por favor insira o corpo da mensagem."),
 });
 
 const onSubmit = () => {

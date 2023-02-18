@@ -68,9 +68,16 @@ const Footer = () => {
                   <LinkWithScroll
                     key={id}
                     to={pageRef[id]}
-                    style={{ textDecoration: "none", marginBottom: "5px" }}
+                    style={{
+                      textDecoration: "none",
+                      marginBottom: "5px",
+                    }}
                   >
-                    <Typography variant="body2" color="common.white">
+                    <Typography
+                      variant="body2"
+                      color="common.white"
+                      sx={{ "&:hover": { color: "#1893c6" } }}
+                    >
                       {page}
                     </Typography>
                   </LinkWithScroll>
@@ -102,13 +109,19 @@ const Footer = () => {
                       flexDirection: "row",
                       marginBottom: "5px",
                     }}
+                    target="_blank"
                   >
                     <img
                       src={require(`../assets/${sm[0]}`)}
                       alt={sm[1]}
                       width="20px"
                     />
-                    <Typography variant="body2" color="common.white" ml={0.5}>
+                    <Typography
+                      variant="body2"
+                      color="common.white"
+                      ml={0.5}
+                      sx={{ "&:hover": { color: "#1893c6" } }}
+                    >
                       {sm[1]}
                     </Typography>
                   </LinkWithScroll>
