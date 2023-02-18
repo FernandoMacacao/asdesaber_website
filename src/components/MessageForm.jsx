@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Typography from "@mui/material/Typography";
 import { useFormik } from "formik";
 import {
@@ -14,7 +14,7 @@ import * as yup from "yup";
 import DOMPurify from "dompurify";
 import emailjs from "@emailjs/browser";
 
-const subjects = [
+const SUBJECTS = [
   "Explicações",
   "Estudo Acompanhado",
   "Cursos Intensivos",
@@ -28,8 +28,14 @@ const sanitize = (value) => {
 };
 
 const schema = yup.object().shape({
-  firstName: yup.string().required("Por favor insira o seu primeiro nome."),
-  lastName: yup.string().required("Por favor insira o seu último nome."),
+  firstName: yup
+    .string()
+    .transform(sanitize)
+    .required("Por favor insira o seu primeiro nome."),
+  lastName: yup
+    .string()
+    .transform(sanitize)
+    .required("Por favor insira o seu último nome."),
   email: yup
     .string()
     .transform(sanitize)
@@ -192,7 +198,7 @@ const MessageForm = ({ shadow }) => {
                 errors.subject && touched.subject ? errors.subject : ""
               }
             >
-              {subjects.map((subject, id) => (
+              {SUBJECTS.map((subject, id) => (
                 <MenuItem key={id} value={subject}>
                   {subject}
                 </MenuItem>
