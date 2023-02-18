@@ -36,31 +36,37 @@ const Tutoring = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           maxWidth: "100vw",
-          height: "30vh",
+          minHeight: "30vh",
           mt: 10,
         }}
       >
         <Container maxWidth="lg" sx={{ height: "100%" }}>
           <Box
             display="flex"
-            height="100%"
+            minHeight="30vh"
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
             width="100%"
+            py={2}
           >
             <img src={ESADLogo} alt="logo ESAD" />
-            <Typography variant="h6" color="textSecondary" textAlign="center">
+            <Typography
+              variant="h6"
+              color="textSecondary"
+              textAlign="center"
+              mt={2}
+            >
               Não perca esta oportunidade
             </Typography>
             <Typography variant="h5" color="common.black" textAlign="center">
               Aproveite 10% de Desconto nas Explicações Online!
             </Typography>
             <Typography
-              variant="body1"
               color="common.black"
               textAlign="center"
               mt={3}
+              fontSize="0.875rem"
             >
               * Válido apenas para alunos da Escola Secundária António Damásio
             </Typography>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import { useFormik } from "formik";
 import {
@@ -60,16 +60,11 @@ const schema = yup.object().shape({
 });
 
 const MessageForm = ({ shadow }) => {
-  const form = useRef();
+  const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   const onSubmit = () => {
     emailjs
-      .sendForm(
-        "service_wvud6d6",
-        "template_y33qp9k",
-        form.current,
-        "q1XDbHQY1b3PiZGHO"
-      )
+      .send("service_wvud6d6", "template_y33qp9k", values, "q1XDbHQY1b3PiZGHO")
       .then(
         (result) => {
           console.log(result.text);
@@ -78,14 +73,6 @@ const MessageForm = ({ shadow }) => {
           console.log(error.text);
         }
       );
-  };
-
-  const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
-
-  const [subject, setSubject] = useState("");
-
-  const handleSubject = (event) => {
-    setSubject(event.target.value);
   };
 
   const { values, touched, handleBlur, errors, handleChange, handleSubmit } =
@@ -112,7 +99,6 @@ const MessageForm = ({ shadow }) => {
       display="flex"
       alignItems="center"
       component="form"
-      ref={form}
       onSubmit={handleSubmit}
       noValidate
       autoComplete="off"
@@ -200,7 +186,6 @@ const MessageForm = ({ shadow }) => {
               value={values.subject}
               onChange={(e) => {
                 handleChange(e);
-                handleSubject(e);
               }}
               onBlur={handleBlur}
               helperText={
@@ -215,7 +200,7 @@ const MessageForm = ({ shadow }) => {
             </TextField>
           </Grid>
         </Grid>
-        {subject === "Outro" ? (
+        {values.subject === "Outro" ? (
           <Grid container spacing={1} mt={{ xs: 1, md: 2 }}>
             <Grid item xs={12}>
               <TextField

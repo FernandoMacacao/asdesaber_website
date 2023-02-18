@@ -1,11 +1,45 @@
 {
-    "Hero": {
-        "title": "Saiba onde estamos!",
-        "subtitle": "Entre em contacto connosco e seja o nosso próximo caso de sucesso.",
-        "img": "hero_contacts.png",
-        "noButton": true,
-        "singleButton": false,
-        "firstButton": "",
-        "secondButton": ""
+  "Hero": {
+    "title": "Saiba onde estamos!",
+    "subtitle": "Entre em contacto connosco e seja o nosso próximo caso de sucesso.",
+    "img": "hero_contacts.png",
+    "noButton": true,
+    "singleButton": false,
+    "firstButton": "",
+    "secondButton": ""
+  },
+  "Contacts": [
+    {
+      "icon": "contacts_1.svg",
+      "title": "Morada",
+      "isArray": false,
+      "text": "Rua de Moscavide, 16B 1990-162 Lisboa",
+      "hasLink": false,
+      "href": ""
+    },
+    {
+      "icon": "contacts_2.svg",
+      "title": "Telemóvel",
+      "isArray": true,
+      "text": ["(351) 218 963 068", "(351) 969 754 763"],
+      "hasLink": false,
+      "href": ""
+    },
+    {
+      "icon": "contacts_3.svg",
+      "title": "Email",
+      "isArray": false,
+      "text": "geral@asdesaber.pt",
+      "hasLink": false,
+      "href": ""
+    },
+    {
+      "icon": "contacts_4.svg",
+      "title": "Redes Sociais",
+      "isArray": true,
+      "text": ["Facebook", "Instagram"],
+      "hasLink": false,
+      "href": ""
     }
+  ]
 }

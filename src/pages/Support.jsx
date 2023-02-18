@@ -46,18 +46,19 @@ const Support = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           maxWidth: "100vw",
-          height: "30vh",
+          minHeight: "30vh",
           mt: 10,
         }}
       >
         <Container maxWidth="lg" sx={{ height: "100%" }}>
           <Box
             display="flex"
-            height="100%"
+            minHeight="30vh"
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
             width="100%"
+            py={2}
           >
             <Typography variant="h5" color="common.white" textAlign="center">
               Consulte os nossos programas!

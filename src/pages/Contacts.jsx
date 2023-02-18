@@ -8,7 +8,8 @@ import { useLoadScript, GoogleMap, MarkerF } from "@react-google-maps/api";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import "../styles/styles.css";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+import Banner from "../assets/banner_contacts.png";
 
 const Contacts = () => {
   const { isLoaded } = useLoadScript({
@@ -49,6 +50,93 @@ const Contacts = () => {
         </Container>
       </Box>
       {/* BANNER */}
+      <Box
+        sx={{
+          backgroundImage: `url(${Banner})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          maxWidth: "100vw",
+          minHeight: "30vh",
+          mt: 10,
+        }}
+      >
+        <Container maxWidth="lg" sx={{ height: "100%" }}>
+          <Box
+            display="flex"
+            height="100%"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            width="100%"
+            py={2}
+          >
+            <Grid
+              container
+              columnSpacing={3}
+              rowSpacing={{ xs: 3, md: 0 }}
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              minHeight="30vh"
+            >
+              {Data.Contacts.map((contact) => {
+                return (
+                  <Grid
+                    key={contact.title}
+                    display="flex"
+                    flexDirection="column"
+                    item
+                    xs={6}
+                    md={3}
+                  >
+                    <img
+                      src={require(`../assets/${contact.icon}`)}
+                      alt={contact.title}
+                      height="50px"
+                      style={{ marginBottom: 10 }}
+                    />
+                    <Typography
+                      variant="body1"
+                      color="textPrimary"
+                      fontWeight={700}
+                      textAlign="center"
+                    >
+                      {contact.title}
+                    </Typography>
+                    {contact.isArray ? (
+                      <Box display="flex" flexDirection="column">
+                        <Typography
+                          variant="body1"
+                          color="textPrimary"
+                          textAlign="center"
+                        >
+                          {contact.text[0]}
+                        </Typography>
+                        <Typography
+                          variant="body1"
+                          color="textPrimary"
+                          textAlign="center"
+                        >
+                          {contact.text[1]}
+                        </Typography>
+                      </Box>
+                    ) : (
+                      <Typography
+                        variant="body1"
+                        color="textPrimary"
+                        textAlign="center"
+                      >
+                        {contact.text}
+                      </Typography>
+                    )}
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </Box>
+        </Container>
+      </Box>
       {/* MESSAGE FORM SECTION */}
       <MessageForm />
       {/* FOOTER */}
