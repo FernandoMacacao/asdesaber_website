@@ -38,8 +38,11 @@
       "title": "Redes Sociais",
       "isArray": true,
       "text": ["Facebook", "Instagram"],
-      "hasLink": false,
-      "href": ""
+      "hasLink": true,
+      "href": [
+        "https://pt-pt.facebook.com/asdesaber/",
+        "https://www.instagram.com/asdesaber/"
+      ]
     }
   ]
 }

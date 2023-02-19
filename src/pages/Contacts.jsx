@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import "../styles/styles.css";
 import { Box, Grid } from "@mui/material";
 import Banner from "../assets/banner_contacts.png";
+import { Link } from "react-router-dom";
 
 const Contacts = () => {
   const { isLoaded } = useLoadScript({
@@ -110,20 +111,53 @@ const Contacts = () => {
                     </Typography>
                     {contact.isArray ? (
                       <Box display="flex" flexDirection="column">
-                        <Typography
-                          variant="body1"
-                          color="textPrimary"
-                          textAlign="center"
-                        >
-                          {contact.text[0]}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          color="textPrimary"
-                          textAlign="center"
-                        >
-                          {contact.text[1]}
-                        </Typography>
+                        {contact.hasLink ? (
+                          <>
+                            <Link
+                              to={contact.href[0]}
+                              style={{ textDecoration: "none" }}
+                              target="_blank"
+                            >
+                              <Typography
+                                variant="body1"
+                                color="textPrimary"
+                                textAlign="center"
+                              >
+                                {contact.text[0]}
+                              </Typography>
+                            </Link>
+                            <Link
+                              to={contact.href[1]}
+                              style={{ textDecoration: "none" }}
+                              target="_blank"
+                            >
+                              <Typography
+                                variant="body1"
+                                color="textPrimary"
+                                textAlign="center"
+                              >
+                                {contact.text[1]}
+                              </Typography>
+                            </Link>
+                          </>
+                        ) : (
+                          <>
+                            <Typography
+                              variant="body1"
+                              color="textPrimary"
+                              textAlign="center"
+                            >
+                              {contact.text[0]}
+                            </Typography>
+                            <Typography
+                              variant="body1"
+                              color="textPrimary"
+                              textAlign="center"
+                            >
+                              {contact.text[1]}
+                            </Typography>
+                          </>
+                        )}
                       </Box>
                     ) : (
                       <Typography

@@ -4,6 +4,7 @@ import Logo from "../assets/logo.png";
 import { Box, Container, Typography } from "@mui/material";
 import LinkWithScroll from "./LinkWithScroll";
 import Data from "../data/pages.json";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -74,7 +75,7 @@ const Footer = () => {
                   Redes Sociais
                 </Typography>
                 {Data.SocialMedia.map((sm) => (
-                  <LinkWithScroll
+                  <Link
                     key={sm.name}
                     to={sm.href}
                     style={{
@@ -98,7 +99,7 @@ const Footer = () => {
                     >
                       {sm.name}
                     </Typography>
-                  </LinkWithScroll>
+                  </Link>
                 ))}
               </Box>
             </Grid>

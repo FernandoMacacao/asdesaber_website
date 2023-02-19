@@ -6,23 +6,23 @@
     },
     {
       "name": "Explicações",
-      "href": "explicacoes"
+      "href": "/explicacoes"
     },
     {
       "name": "Apoio Psicopedagógico",
-      "href": "apoio"
+      "href": "/apoio"
     },
     {
       "name": "Formação",
-      "href": "formacao"
+      "href": "/formacao"
     },
     {
       "name": "Sobre Nós",
-      "href": "sobrenos"
+      "href": "/sobrenos"
     },
     {
       "name": "Contactos",
-      "href": "contactos"
+      "href": "/contactos"
     }
   ],
   "SocialMedia": [
