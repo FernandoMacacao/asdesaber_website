@@ -15,6 +15,11 @@ body {
 
 body {
   background-color: #f5f5f5;
+  padding-right: 0 !important;
+}
+
+header {
+  padding-right: 0 !important;
 }
 
 html,
