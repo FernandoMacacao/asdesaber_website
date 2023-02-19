@@ -10,8 +10,9 @@ const PhraseBanner = ({ text }) => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      height="10vh"
+      minHeight="10vh"
       backgroundColor="#1893C6"
+      py={2}
     >
       <Typography variant="h5" color="common.white" textAlign="center">
         {text}

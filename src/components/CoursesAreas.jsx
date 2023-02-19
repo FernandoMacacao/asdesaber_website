@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LinkWithScroll from "./LinkWithScroll";
@@ -34,28 +34,37 @@ const Courses = ({ title, subtitle, courses }) => {
       {courses.map((course, index) => {
         return (
           <Box backgroundColor={index % 2 !== 0 ? "#f5f5f5" : "#1893c6"} py={5}>
-            <Container
-              maxWidth="lg"
-              sx={{
-                display: "flex",
-              }}
-            >
-              <Box
+            <Container maxWidth="md">
+              <Grid
+                container
                 display="flex"
-                flexDirection="row"
-                alignItems="center"
+                spacing={{ xs: 3, md: 0 }}
                 justifyContent="center"
               >
-                <Box>
+                <Grid
+                  item
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  xs={12}
+                  md={2}
+                >
                   <img
                     src={require(`../assets/${course.icon}`)}
                     alt={course.title}
-                    style={{
-                      marginRight: 30,
-                    }}
+                    height="80px"
+                    width="80px"
                   />
-                </Box>
-                <Box>
+                </Grid>
+                <Grid
+                  item
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems={{ xs: "center", md: "flex-start" }}
+                  xs={12}
+                  md={5}
+                >
                   <Typography
                     variant="h6"
                     color="textSecondary"
@@ -64,6 +73,7 @@ const Courses = ({ title, subtitle, courses }) => {
                       textShadow:
                         index % 2 === 0 ? "0px 0px 2px #3D3C3C" : undefined,
                     }}
+                    textAlign={{ xs: "center", md: "left" }}
                   >
                     {course.title}
                   </Typography>
@@ -81,6 +91,11 @@ const Courses = ({ title, subtitle, courses }) => {
                         color={
                           index % 2 !== 0 ? "common.black" : "common.white"
                         }
+                        sx={{
+                          "&:hover": {
+                            color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                          },
+                        }}
                       >
                         Curso Anual
                       </Typography>
@@ -100,6 +115,11 @@ const Courses = ({ title, subtitle, courses }) => {
                     <Typography
                       variant="body1"
                       color={index % 2 !== 0 ? "common.black" : "common.white"}
+                      sx={{
+                        "&:hover": {
+                          color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                        },
+                      }}
                     >
                       Curso Intensivo - Longa Duração (48h)
                     </Typography>
@@ -118,6 +138,11 @@ const Courses = ({ title, subtitle, courses }) => {
                     <Typography
                       variant="body1"
                       color={index % 2 !== 0 ? "common.black" : "common.white"}
+                      sx={{
+                        "&:hover": {
+                          color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                        },
+                      }}
                     >
                       Curso Intensivo - Longa Duração (24h)
                     </Typography>
@@ -125,8 +150,8 @@ const Courses = ({ title, subtitle, courses }) => {
                       color={index % 2 === 0 ? "info" : "success"}
                     />
                   </LinkWithScroll>
-                </Box>
-              </Box>
+                </Grid>
+              </Grid>
             </Container>
           </Box>
         );

@@ -18,7 +18,9 @@ const Footer = () => {
                 alignItems="center"
                 justifyContent={{ xs: "center", md: "flex-start" }}
               >
-                <img src={Logo} alt="Logo Ás de Saber" width="100px" />
+                <LinkWithScroll to="/">
+                  <img src={Logo} alt="Logo Ás de Saber" width="100px" />
+                </LinkWithScroll>
               </Box>
             </Grid>
             <Grid item xs={12} md={3} lg={3}>
