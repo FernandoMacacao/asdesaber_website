@@ -42,7 +42,7 @@ const Contacts = () => {
               Loading...
             </Typography>
           ) : (
-            <>
+            <div data-aos="zoom-in">
               <GoogleMap
                 zoom={19}
                 center={center}
@@ -50,7 +50,7 @@ const Contacts = () => {
               >
                 <MarkerF position={center} />
               </GoogleMap>
-            </>
+            </div>
           )}
         </Container>
       </Box>

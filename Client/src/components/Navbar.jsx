@@ -152,9 +152,11 @@ function Navbar() {
             alignItems="center"
             justifyContent="center"
           >
-            <Button variant="contained" color="secondary">
-              Inscreva-se!
-            </Button>
+            <LinkWithScroll to="/contactos" style={{ textDecoration: "none" }}>
+              <Button variant="contained" color="secondary">
+                Inscreva-se!
+              </Button>
+            </LinkWithScroll>
           </Box>
         </Toolbar>
       </Container>
