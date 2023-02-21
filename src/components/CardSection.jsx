@@ -3,7 +3,7 @@ import { Box, Container } from "@mui/system";
 import React from "react";
 import CheckIcon from "../assets/check_icon.svg";
 import XIcon from "../assets/x_icon.svg";
-import SectionHeader from "../components/SectionHeader";
+import SectionHeader from "./SectionHeader";
 import LinkWithScroll from "./LinkWithScroll";
 
 const CardSection = ({ title, subtitle, plans }) => {

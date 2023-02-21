@@ -13,6 +13,7 @@ import {
 import * as yup from "yup";
 import DOMPurify from "dompurify";
 import emailjs from "@emailjs/browser";
+import { notification } from "antd";
 
 const SUBJECTS = [
   "Explicações",
@@ -74,6 +75,12 @@ const MessageForm = ({ shadow }) => {
       .then(
         (result) => {
           console.log(result.text);
+          notification.success({
+            message: "Mensagem enviada",
+            description: "A sua mensagem foi enviada com sucesso.",
+            placement: "top",
+          });
+          resetForm();
         },
         (error) => {
           console.log(error.text);
@@ -81,20 +88,27 @@ const MessageForm = ({ shadow }) => {
       );
   };
 
-  const { values, touched, handleBlur, errors, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "",
-        subject2: "",
-        body: "",
-      },
-      validationSchema: schema,
-      onSubmit,
-    });
+  const {
+    values,
+    touched,
+    handleBlur,
+    errors,
+    handleChange,
+    handleSubmit,
+    resetForm,
+  } = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      subject: "",
+      subject2: "",
+      body: "",
+    },
+    validationSchema: schema,
+    onSubmit,
+  });
 
   return (
     <Box
