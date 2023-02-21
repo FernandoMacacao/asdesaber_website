@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "title": "Psicologia ao Serviço do Êxito Escolar",
+    "subtitle": "No percurso escolar do aluno podem surgir momentos em que seja necessário um outro tipo de apoio ou intervenção mais especializada no seu perfil psicológico.",
+    "img": "hero_support.png",
+    "singleButton": true,
+    "firstButton": "Inscreva-se!",
+    "href": "/contactos"
+  },
+  "Plans": [
+    {
+      "title": "Psicologia e Psicomotricidade",
+      "hasSubtitle": true,
+      "subtitle": "Conceito Phi",
+      "icon": "plan_icon_4.svg",
+      "hasText": true,
+      "text": "Transforme os seus pontos fracos em pontos fortes! Explore a relação entre emoção e razão numa construção otimista de conhecimento e descoberta do eu.",
+      "hasLinkText": false,
+      "linkText": "",
+      "href": "",
+      "hasChecks": false,
+      "checks": [""],
+      "hasX": false,
+      "x": [""]
+    },
+    {
+      "title": "Orientação Vocacional",
+      "hasSubtitle": true,
+      "subtitle": "Telépsia",
+      "icon": "plan_icon_5.svg",
+      "hasText": true,
+      "text": "A Orientação vocacional destina-se a auxiliar os jovens na escolha da área/curso de prosseguimento de estudos/carreira, mais adequada às suas realidades pessoais.",
+      "hasLinkText": false,
+      "linkText": "",
+      "href": "",
+      "hasChecks": false,
+      "checks": [""],
+      "hasX": false,
+      "x": [""]
+    }
+  ]
+}

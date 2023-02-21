@@ -1,0 +1,54 @@
+{
+  "Hero": {
+    "title": "Somos uma Entidade Formadora Certificada!",
+    "subtitle": "Investir em formação é vital para o sucesso numa sociedade competitiva. Aproveite as nossas oportunidades para melhorar as suas habilidades.",
+    "img": "hero_graduation.png",
+    "singleButton": true,
+    "firstButton": "Inscreva-se!",
+    "href": "/contactos"
+  },
+  "Cards": [
+    {
+      "icon": "personal_development.svg",
+      "title": "Desenvolvimento Pessoal",
+      "odd": true,
+      "hasHover": false,
+      "hoverText": [""]
+    },
+    {
+      "icon": "teacher_graduation.svg",
+      "title": "Formação de professores",
+      "odd": false,
+      "hasHover": false,
+      "hoverText": [""]
+    },
+    {
+      "icon": "languages_1.svg",
+      "title": "Línguas e literaturas estrangeiras",
+      "odd": true,
+      "hasHover": false,
+      "hoverText": [""]
+    },
+    {
+      "icon": "languages_2.svg",
+      "title": "Língua e literatura materna",
+      "odd": false,
+      "hasHover": false,
+      "hoverText": [""]
+    },
+    {
+      "icon": "admin_work.svg",
+      "title": "Trabalho administrativo",
+      "odd": true,
+      "hasHover": false,
+      "hoverText": [""]
+    },
+    {
+      "icon": "secretary.svg",
+      "title": "Secretariado",
+      "odd": false,
+      "hasHover": false,
+      "hoverText": [""]
+    }
+  ]
+}
