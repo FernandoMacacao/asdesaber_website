@@ -12,9 +12,8 @@ const Courses = () => {
         subtitle={Data.Hero.subtitle}
         img={Data.Hero.img}
         noButton={Data.Hero.noButton}
-        singleButton={Data.Hero.singleButton}
         firstButton={Data.Hero.firstButton}
-        secondButton={Data.Hero.secondButton}
+        href={Data.Hero.href}
       />
       <CoursesAreas
         title="Cursos online"

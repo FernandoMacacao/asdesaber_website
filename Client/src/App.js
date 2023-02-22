@@ -10,11 +10,22 @@ import {
   Graduation,
   About,
   Contacts,
+  NotFound,
 } from "./pages/index";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import WhatsAppButton from "./components/WhatsAppButton";
+
+const DefaultLayout = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+    <WhatsAppButton />
+  </>
+);
+
+const NotFoundLayout = ({ children }) => <>{children}</>;
 
 function App() {
   useEffect(() => {
@@ -24,18 +35,81 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Navbar />
         {/* NAVBAR ROUTES */}
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/explicacoes" exact element={<Tutoring />} />
-          <Route path="/explicacoes/cursos" exact element={<Courses />} />
-          <Route path="/apoio" exact element={<Support />} />
-          <Route path="/formacao" exact element={<Graduation />} />
-          <Route path="/sobrenos" exact element={<About />} />
-          <Route path="/contactos" exact element={<Contacts />} />
+          <Route
+            path="/"
+            exact
+            element={
+              <DefaultLayout>
+                <Home />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="/explicacoes"
+            exact
+            element={
+              <DefaultLayout>
+                <Tutoring />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="/explicacoes/cursos"
+            exact
+            element={
+              <DefaultLayout>
+                <Courses />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="/apoio"
+            exact
+            element={
+              <DefaultLayout>
+                <Support />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="/formacao"
+            exact
+            element={
+              <DefaultLayout>
+                <Graduation />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="/sobrenos"
+            exact
+            element={
+              <DefaultLayout>
+                <About />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="/contactos"
+            exact
+            element={
+              <DefaultLayout>
+                <Contacts />
+              </DefaultLayout>
+            }
+          />
+          <Route
+            path="*"
+            exact
+            element={
+              <NotFoundLayout>
+                <NotFound />
+              </NotFoundLayout>
+            }
+          />
         </Routes>
-        <WhatsAppButton />
       </Router>
     </ThemeProvider>
   );
