@@ -125,14 +125,34 @@ const Footer = () => {
                       alt={contact.text}
                       width="20px"
                     />
-                    <Typography
-                      variant="body2"
-                      color="common.white"
-                      ml={0.5}
-                      textAlign={{ xs: "center", md: "left" }}
-                    >
-                      {contact.text}
-                    </Typography>
+                    {contact.email || contact.phone ? (
+                      <a
+                        href={
+                          contact.email
+                            ? `mailto:${contact.text}`
+                            : `tel:+351${contact.text}`
+                        }
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography
+                          variant="body2"
+                          color="common.white"
+                          ml={0.5}
+                          textAlign={{ xs: "center", md: "left" }}
+                        >
+                          {contact.text}
+                        </Typography>
+                      </a>
+                    ) : (
+                      <Typography
+                        variant="body2"
+                        color="common.white"
+                        ml={0.5}
+                        textAlign={{ xs: "center", md: "left" }}
+                      >
+                        {contact.text}
+                      </Typography>
+                    )}
                   </Box>
                 ))}
               </Box>

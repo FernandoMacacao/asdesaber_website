@@ -16,13 +16,15 @@ import emailjs from "@emailjs/browser";
 import { notification } from "antd";
 
 const SUBJECTS = [
+  "Apoio Psicopedagógico",
   "Explicações",
-  "Estudo Acompanhado",
-  "Cursos Intensivos",
+  "Formação",
+  "Preparação para Exames",
   "Outro",
 ];
 
 const PHONE_REGEX = "^(9[1236][0-9]) ?([0-9]{3}) ?([0-9]{3})$";
+const NAME_REGEX = "^[A-Za-zÀ-ÖØ-öø-ÿs.'-]{1,40}$";
 
 const sanitize = (value) => {
   return DOMPurify.sanitize(value);
@@ -32,10 +34,12 @@ const schema = yup.object().shape({
   firstName: yup
     .string()
     .transform(sanitize)
+    .matches(NAME_REGEX, { message: "Por favor insira um nome válido." })
     .required("Por favor insira o seu primeiro nome."),
   lastName: yup
     .string()
     .transform(sanitize)
+    .matches(NAME_REGEX, { message: "Por favor insira um nome válido." })
     .required("Por favor insira o seu último nome."),
   email: yup
     .string()
@@ -49,7 +53,7 @@ const schema = yup.object().shape({
   subject: yup
     .string()
     .transform(sanitize)
-    .oneOf(["Explicações", "Estudo Acompanhado", "Cursos Intensivos", "Outro"])
+    .oneOf(SUBJECTS)
     .required("Por favor insira um assunto."),
   subject2: yup.string().when("subject", {
     is: "Outro",
@@ -238,7 +242,7 @@ const MessageForm = ({ shadow }) => {
             </TextField>
           </Grid>
         </Grid>
-        {values.subject === SUBJECTS[3] ? (
+        {values.subject === SUBJECTS[4] ? (
           <Grid container spacing={1} mt={{ xs: 1, md: 2 }}>
             <Grid item xs={12}>
               <TextField

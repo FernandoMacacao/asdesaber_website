@@ -40,19 +40,27 @@
   "Contacts": [
     {
       "icon": "phone.svg",
-      "text": "218 963 068"
+      "text": "218 963 068",
+      "phone": true,
+      "email": false
     },
     {
       "icon": "phone.svg",
-      "text": "969 754 763"
+      "text": "969 754 763",
+      "phone": true,
+      "email": false
     },
     {
       "icon": "email.svg",
-      "text": "geral@asdesaber.pt"
+      "text": "geral@asdesaber.pt",
+      "phone": false,
+      "email": true
     },
     {
       "icon": "location.svg",
-      "text": "Rua de Moscavide, 16B 1990-162 Lisboa"
+      "text": "Rua de Moscavide, 16B 1990-162 Lisboa",
+      "phone": false,
+      "email": false
     }
   ]
 }
