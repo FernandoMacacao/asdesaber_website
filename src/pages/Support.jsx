@@ -16,7 +16,6 @@ import {
 import Footer from "../components/Footer";
 import OvPDF from "../assets/pdf_ov.pdf";
 import { Link } from "react-router-dom";
-import LinkWithScroll from "../components/LinkWithScroll";
 
 const Support = () => {
   const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
@@ -118,25 +117,22 @@ const Support = () => {
                 flexDirection="row"
                 justifyContent="space-between"
               >
-                <LinkWithScroll
-                  to="https://www.inlogos.pt/conceito-phi"
-                  target="_blank"
-                >
+                <Link to="https://www.inlogos.pt/conceito-phi" target="_blank">
                   <img
                     style={{ marginInline: "20px" }}
                     src={LogoConceitoPhi}
                     alt="Conceito Phi"
                     height="80px"
                   />
-                </LinkWithScroll>
-                <LinkWithScroll to="https://telepsia.com/" target="_blank">
+                </Link>
+                <Link to="https://telepsia.com/" target="_blank">
                   <img
                     style={{ marginInline: "20px" }}
                     src={LogoTelepsia}
                     alt="Telépsia"
                     height="80px"
                   />
-                </LinkWithScroll>
+                </Link>
               </Box>
             </Container>
           </Box>

@@ -81,14 +81,13 @@ const MessageForm = ({ shadow }) => {
 
     emailjs
       .send(
-        "service_wvud6d6",
-        "template_y33qp9k",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formTemplate,
-        "q1XDbHQY1b3PiZGHO"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           notification.success({
             message: "Mensagem enviada",
             description: "A sua mensagem foi enviada com sucesso.",
@@ -97,7 +96,12 @@ const MessageForm = ({ shadow }) => {
           resetForm();
         },
         (error) => {
-          console.log(error.text);
+          notification.error({
+            message: "Ocorreu um erro",
+            description:
+              "Não conseguimos enviar a sua mensagem, por favor tente mais tarde",
+            placement: "top",
+          });
         }
       );
   };
