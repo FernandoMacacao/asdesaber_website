@@ -95,7 +95,7 @@ const MessageForm = ({ shadow }) => {
           });
           resetForm();
         },
-        (error) => {
+        () => {
           notification.error({
             message: "Ocorreu um erro",
             description:
