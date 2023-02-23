@@ -12,9 +12,8 @@ import {
 } from "@mui/material";
 import * as yup from "yup";
 import DOMPurify from "dompurify";
-// import emailjs from "@emailjs/browser";
-import axios from "axios";
-// import { notification } from "antd";
+import emailjs from "@emailjs/browser";
+import { notification } from "antd";
 
 const SUBJECTS = [
   "Explicações",
@@ -71,30 +70,36 @@ const MessageForm = ({ shadow }) => {
   const isFullWidth = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   const onSubmit = () => {
-    const from = values.email;
-    const subject = values.subject;
-    const text = values.body;
+    const formTemplate = {
+      name: values.firstName + " " + values.lastName,
+      email: values.email,
+      phone: values.phone === "" ? "Não foi fornecido" : values.phone,
+      subject:
+        values.subject === SUBJECTS[3] ? values.subject2 : values.subject,
+      body: values.body,
+    };
 
-    axios
-      .post("http://localhost:3001/send-email", { from, subject, text })
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
-    // emailjs
-    //   .send("service_wvud6d6", "template_y33qp9k", values, "q1XDbHQY1b3PiZGHO")
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       notification.success({
-    //         message: "Mensagem enviada",
-    //         description: "A sua mensagem foi enviada com sucesso.",
-    //         placement: "top",
-    //       });
-    //       resetForm();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .send(
+        "service_wvud6d6",
+        "template_y33qp9k",
+        formTemplate,
+        "q1XDbHQY1b3PiZGHO"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          notification.success({
+            message: "Mensagem enviada",
+            description: "A sua mensagem foi enviada com sucesso.",
+            placement: "top",
+          });
+          resetForm();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const {
@@ -104,7 +109,7 @@ const MessageForm = ({ shadow }) => {
     errors,
     handleChange,
     handleSubmit,
-    // resetForm,
+    resetForm,
   } = useFormik({
     initialValues: {
       firstName: "",
@@ -229,7 +234,7 @@ const MessageForm = ({ shadow }) => {
             </TextField>
           </Grid>
         </Grid>
-        {values.subject === "Outro" ? (
+        {values.subject === SUBJECTS[3] ? (
           <Grid container spacing={1} mt={{ xs: 1, md: 2 }}>
             <Grid item xs={12}>
               <TextField
