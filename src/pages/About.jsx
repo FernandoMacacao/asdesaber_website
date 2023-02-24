@@ -69,7 +69,7 @@ const About = () => {
                     component="img"
                     image={require(`../assets/${member.img}`)}
                     alt={member.name}
-                    height={400}
+                    height="auto"
                   />
                   <CardContent>
                     <Typography
