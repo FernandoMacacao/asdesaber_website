@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useMediaQuery, Container } from "@mui/material";
 import React from "react";
 
 const PhraseBanner = ({ text }) => {
@@ -14,16 +14,26 @@ const PhraseBanner = ({ text }) => {
       backgroundColor="#1893C6"
       py={2}
     >
-      <Typography variant="h5" color="common.white" textAlign="center">
-        {text}
-      </Typography>
-      <Box
-        mt={1}
-        height={isMobile ? "2px" : "3px"}
-        borderRadius="5em"
-        backgroundColor="common.white"
-        width={isMobile ? "50%" : "20%"}
-      />
+      <Container
+        maxWidth="lg"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h5" color="common.white" textAlign="center">
+          {text}
+        </Typography>
+        <Box
+          mt={1}
+          height={isMobile ? "2px" : "3px"}
+          borderRadius="5em"
+          backgroundColor="common.white"
+          width={isMobile ? "50%" : "20%"}
+        />
+      </Container>
     </Box>
   );
 };

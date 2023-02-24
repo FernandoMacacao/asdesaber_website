@@ -115,7 +115,7 @@ const Support = () => {
               <Box
                 display="flex"
                 flexDirection="row"
-                justifyContent="space-between"
+                justifyContent={{ xs: "center", md: "space-between" }}
               >
                 <Link to="https://www.inlogos.pt/conceito-phi" target="_blank">
                   <img
