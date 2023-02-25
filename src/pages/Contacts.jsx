@@ -69,10 +69,10 @@ const Contacts = () => {
           <Box
             display="flex"
             height="100%"
+            width="100%"
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            width="100%"
             py={2}
           >
             <Grid
@@ -81,7 +81,7 @@ const Contacts = () => {
               rowSpacing={{ xs: 3, md: 0 }}
               display="flex"
               justifyContent="space-between"
-              alignItems="center"
+              pt={{ xs: 0, md: 7.3 }}
               minHeight="30vh"
             >
               {Data.Contacts.map((contact) => {
@@ -98,7 +98,7 @@ const Contacts = () => {
                       src={require(`../assets/${contact.icon}`)}
                       alt={contact.title}
                       height="50px"
-                      style={{ marginBottom: 10 }}
+                      style={{ marginBottom: 5 }}
                     />
                     <Typography
                       variant="body1"

@@ -79,7 +79,7 @@ const MessageForm = ({ shadow }) => {
       email: values.email,
       phone: values.phone === "" ? "Não foi fornecido" : values.phone,
       subject:
-        values.subject === SUBJECTS[3] ? values.subject2 : values.subject,
+        values.subject === SUBJECTS[4] ? values.subject2 : values.subject,
       body: values.body,
     };
 
