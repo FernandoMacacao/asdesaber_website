@@ -29,7 +29,7 @@ const NotFoundLayout = ({ children }) => <>{children}</>;
 
 function App() {
   useEffect(() => {
-    Aos.init({ duration: 1500 });
+    Aos.init({ duration: 1500, once: true });
   });
 
   return (
