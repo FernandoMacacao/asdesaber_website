@@ -2,7 +2,7 @@
   "Hero": {
     "title": "Somos uma Entidade Formadora Certificada!",
     "subtitle": "Investir em formação é vital para o sucesso numa sociedade competitiva. Aproveite as nossas oportunidades para melhorar as suas habilidades.",
-    "img": "hero_graduation.png",
+    "img": "hero_graduation.jpg",
     "singleButton": true,
     "firstButton": "Inscreva-se!",
     "href": "/contactos"

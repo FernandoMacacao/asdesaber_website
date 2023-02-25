@@ -2,7 +2,7 @@
   "Hero": {
     "title": "Ensino Básico, Secundário e Superior",
     "subtitle": "Em cada grau de escolaridade esclarecemos dúvidas e aprofundamos conhecimentos.",
-    "img": "hero_tutoring.png",
+    "img": "hero_tutoring.jpg",
     "singleButton": true,
     "firstButton": "Inscreva-se!",
     "href": "/contactos"

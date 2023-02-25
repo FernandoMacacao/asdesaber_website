@@ -2,7 +2,7 @@
   "Hero": {
     "title": "Cursos de Preparação para Exames",
     "subtitle": "Os exames são momentos de avaliação decisivos no percurso académico e, por isso, estes devem ser preparados da melhor maneira possivel.",
-    "img": "hero_courses.png",
+    "img": "hero_courses.jpg",
     "singleButton": true,
     "firstButton": "Inscreva-se!",
     "href": "/contactos"

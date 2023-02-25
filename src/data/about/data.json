@@ -2,7 +2,7 @@
   "Hero": {
     "title": "Quem Somos",
     "subtitle": "Somos uma equipa unida pela paixão do ensino e interesse por ajudar cada aluno na superação das suas dificuldades específicas e alcançar a meta que definiu para si.",
-    "img": "hero_about.png",
+    "img": "hero_about.jpg",
     "noButton": true,
     "singleButton": false,
     "firstButton": "",
