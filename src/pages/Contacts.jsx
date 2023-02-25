@@ -80,8 +80,8 @@ const Contacts = () => {
               columnSpacing={3}
               rowSpacing={{ xs: 3, md: 0 }}
               display="flex"
-              alignItems="center"
               justifyContent="space-between"
+              alignItems="center"
               minHeight="30vh"
             >
               {Data.Contacts.map((contact) => {
