@@ -1,7 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
-const scrollToTop = () => window.scrollTo(0, 0);
+const scrollToTop = () => {
+  scroll.scrollToTop({ duration: 500, smooth: "smooth" });
+};
 
 const LinkWithScroll = (props) => <Link {...props} onClick={scrollToTop} />;
 
