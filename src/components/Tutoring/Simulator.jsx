@@ -186,7 +186,7 @@ const Simulator = () => {
           fontSize="0.875rem"
         >
           *No ato de inscrição é cobrado o valor da inscrição (40€) e uma
-          mensalidade de caução que abate na ultima mensalidade.
+          mensalidade de caução que abate na última mensalidade.
         </Typography>
         <Typography variant="body1" color="primary" textAlign="center">
           *Caso permaneça com alguma questão consulte o{" "}
