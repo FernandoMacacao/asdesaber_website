@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LinkWithScroll from "./LinkWithScroll";
+import { Link } from "react-router-dom";
 
 const Courses = ({ title, subtitle, courses }) => {
   return (
@@ -33,7 +34,11 @@ const Courses = ({ title, subtitle, courses }) => {
       </Box>
       {courses.map((course, index) => {
         return (
-          <Box backgroundColor={index % 2 !== 0 ? "#f5f5f5" : "#1893c6"} py={5}>
+          <Box
+            key={index}
+            backgroundColor={index % 2 !== 0 ? "#f5f5f5" : "#1893c6"}
+            py={5}
+          >
             <Container maxWidth="md">
               <Grid
                 container
@@ -104,13 +109,18 @@ const Courses = ({ title, subtitle, courses }) => {
                       />
                     </LinkWithScroll>
                   ) : undefined}
-                  <LinkWithScroll
-                    to="/"
+                  <Link
+                    to={
+                      course.pdfLong === ""
+                        ? "/"
+                        : require(`../assets/${course.pdfLong}`)
+                    }
                     style={{
                       textDecoration: "none",
                       display: "flex",
                       marginBottom: "10px",
                     }}
+                    target={course.pdfLong === "" ? "" : "_blank"}
                   >
                     <Typography
                       variant="body1"
@@ -126,14 +136,19 @@ const Courses = ({ title, subtitle, courses }) => {
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
                     />
-                  </LinkWithScroll>
-                  <LinkWithScroll
-                    to="/"
+                  </Link>
+                  <Link
+                    to={
+                      course.pdfShort === ""
+                        ? "/"
+                        : require(`../assets/${course.pdfShort}`)
+                    }
                     style={{
                       textDecoration: "none",
                       display: "flex",
                       alignItems: "center",
                     }}
+                    target={course.pdfShort === "" ? "" : "_blank"}
                   >
                     <Typography
                       variant="body1"
@@ -144,12 +159,12 @@ const Courses = ({ title, subtitle, courses }) => {
                         },
                       }}
                     >
-                      Curso Intensivo - Longa Duração (24h)
+                      Curso Intensivo - Curta Duração (24h)
                     </Typography>
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
                     />
-                  </LinkWithScroll>
+                  </Link>
                 </Grid>
               </Grid>
             </Container>
