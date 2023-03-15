@@ -48,6 +48,7 @@
         "icon": "icon_course_pt.svg",
         "title": "PORTUGUÊS 12ºANO-ONLINE",
         "hasAnualCourse": true,
+        "pdfAnual": "",
         "pdfShort": "",
         "pdfLong": ""
       },
@@ -55,6 +56,7 @@
         "icon": "icon_course_m.svg",
         "title": "MATEMÁTICA 12ºANO-ONLINE",
         "hasAnualCourse": true,
+        "pdfAnual": "",
         "pdfShort": "",
         "pdfLong": ""
       }
@@ -99,6 +101,7 @@
         "icon": "icon_course_pt.svg",
         "title": "PORTUGUÊS 12ºANO-presencial",
         "hasAnualCourse": true,
+        "pdfAnual": "",
         "pdfShort": "",
         "pdfLong": ""
       },
@@ -106,6 +109,7 @@
         "icon": "icon_course_m.svg",
         "title": "MATEMÁTICA 12ºANO-presencial",
         "hasAnualCourse": true,
+        "pdfAnual": "",
         "pdfShort": "",
         "pdfLong": ""
       }

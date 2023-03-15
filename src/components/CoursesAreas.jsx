@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import LinkWithScroll from "./LinkWithScroll";
 import { Link } from "react-router-dom";
 
 const Courses = ({ title, subtitle, courses }) => {
@@ -83,13 +82,18 @@ const Courses = ({ title, subtitle, courses }) => {
                     {course.title}
                   </Typography>
                   {course.hasAnualCourse ? (
-                    <LinkWithScroll
-                      to="/"
+                    <Link
+                      to={
+                        course.pdfAnual === ""
+                          ? "/"
+                          : require(`../assets/${course.pdfAnual}`)
+                      }
                       style={{
                         textDecoration: "none",
                         display: "flex",
                         marginBottom: "10px",
                       }}
+                      target={course.pdfAnual === "" ? "" : "_blank"}
                     >
                       <Typography
                         variant="body1"
@@ -106,8 +110,13 @@ const Courses = ({ title, subtitle, courses }) => {
                       </Typography>
                       <ArrowForwardIcon
                         color={index % 2 === 0 ? "info" : "success"}
+                        sx={{
+                          "&:hover": {
+                            color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                          },
+                        }}
                       />
-                    </LinkWithScroll>
+                    </Link>
                   ) : undefined}
                   <Link
                     to={
@@ -135,6 +144,11 @@ const Courses = ({ title, subtitle, courses }) => {
                     </Typography>
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
+                      sx={{
+                        "&:hover": {
+                          color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                        },
+                      }}
                     />
                   </Link>
                   <Link
@@ -163,6 +177,11 @@ const Courses = ({ title, subtitle, courses }) => {
                     </Typography>
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
+                      sx={{
+                        "&:hover": {
+                          color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                        },
+                      }}
                     />
                   </Link>
                 </Grid>
