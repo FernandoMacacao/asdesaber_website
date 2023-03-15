@@ -1,9 +1,11 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
 
 const Courses = ({ title, subtitle, courses }) => {
+  const openFile = (pdf) => {
+    window.open(pdf, "_blank");
+  };
   return (
     <>
       <Box my={10}>
@@ -82,16 +84,13 @@ const Courses = ({ title, subtitle, courses }) => {
                     {course.title}
                   </Typography>
                   {course.hasAnualCourse ? (
-                    <Link
-                      to={
-                        course.pdfAnual === ""
-                          ? "/"
-                          : require(`../assets/${course.pdfAnual}`)
-                      }
-                      style={{
+                    <Button
+                      onClick={() => openFile(course.pdfAnual)}
+                      sx={{
                         textDecoration: "none",
                         display: "flex",
                         marginBottom: "10px",
+                        p: 0,
                       }}
                       target={course.pdfAnual === "" ? "" : "_blank"}
                     >
@@ -116,18 +115,15 @@ const Courses = ({ title, subtitle, courses }) => {
                           },
                         }}
                       />
-                    </Link>
+                    </Button>
                   ) : undefined}
-                  <Link
-                    to={
-                      course.pdfLong === ""
-                        ? "/"
-                        : require(`../assets/${course.pdfLong}`)
-                    }
-                    style={{
+                  <Button
+                    onClick={() => openFile(course.pdfLong)}
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       marginBottom: "10px",
+                      padding: 0,
                     }}
                     target={course.pdfLong === "" ? "" : "_blank"}
                   >
@@ -150,17 +146,14 @@ const Courses = ({ title, subtitle, courses }) => {
                         },
                       }}
                     />
-                  </Link>
-                  <Link
-                    to={
-                      course.pdfShort === ""
-                        ? "/"
-                        : require(`../assets/${course.pdfShort}`)
-                    }
+                  </Button>
+                  <Button
+                    onClick={() => openFile(course.pdfShort)}
                     style={{
                       textDecoration: "none",
-                      display: "flex",
-                      alignItems: "center",
+                    }}
+                    sx={{
+                      padding: 0,
                     }}
                     target={course.pdfShort === "" ? "" : "_blank"}
                   >
@@ -183,7 +176,7 @@ const Courses = ({ title, subtitle, courses }) => {
                         },
                       }}
                     />
-                  </Link>
+                  </Button>
                 </Grid>
               </Grid>
             </Container>
