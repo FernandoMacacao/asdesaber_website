@@ -136,7 +136,7 @@ const Courses = ({ title, subtitle, courses }) => {
                         },
                       }}
                     >
-                      Curso Intensivo - Longa Duração (48h)
+                      Curso Intensivo - Longa Duração
                     </Typography>
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
@@ -166,7 +166,7 @@ const Courses = ({ title, subtitle, courses }) => {
                         },
                       }}
                     >
-                      Curso Intensivo - Curta Duração (24h)
+                      Curso Intensivo - Curta Duração
                     </Typography>
                     <ArrowForwardIcon
                       color={index % 2 === 0 ? "info" : "success"}
