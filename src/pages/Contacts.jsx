@@ -81,7 +81,7 @@ const Contacts = () => {
               rowSpacing={{ xs: 3, md: 0 }}
               display="flex"
               justifyContent="space-between"
-              pt={{ xs: 0, md: 7.3 }}
+              alignItems="center"
               minHeight="30vh"
             >
               {Data.Contacts.map((contact) => {
@@ -93,6 +93,7 @@ const Contacts = () => {
                     item
                     xs={6}
                     md={3}
+                    minHeight="125px"
                   >
                     <img
                       src={require(`../assets/${contact.icon}`)}
