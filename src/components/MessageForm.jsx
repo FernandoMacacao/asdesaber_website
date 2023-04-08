@@ -60,7 +60,7 @@ const schema = yup.object().shape({
     then: yup
       .string()
       .transform(sanitize)
-      .max(20, { message: "Por favor insira no máximo 20 caracteres." })
+      .max(20, "Por favor insira no máximo 20 caracteres.")
       .required("Por favor insira um assunto."),
     otherwise: yup.string().transform(sanitize).notRequired(),
   }),
