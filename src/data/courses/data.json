@@ -38,14 +38,14 @@
         "pdfLong": ""
       },
       {
-        "icon": "icon_course_g.svg",
+        "icon": "icon_course_g_white.svg",
         "title": "GEOGRAFIA 11ºANO-ONLINE",
         "hasAnualCourse": false,
         "pdfShort": "",
         "pdfLong": ""
       },
       {
-        "icon": "icon_course_pt.svg",
+        "icon": "icon_course_pt_black.svg",
         "title": "PORTUGUÊS 12ºANO-ONLINE",
         "hasAnualCourse": true,
         "pdfAnual": "",
@@ -53,11 +53,11 @@
         "pdfLong": ""
       },
       {
-        "icon": "icon_course_m.svg",
+        "icon": "icon_course_m_white.svg",
         "title": "MATEMÁTICA 12ºANO-ONLINE",
         "hasAnualCourse": true,
         "pdfAnual": "",
-        "pdfShort": "",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/ES1shXQBzAJBj9VMHRZhEwkBbkagv2FModD_gbDv-p7lNQ?e=8ZvNiu",
         "pdfLong": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EVN334-R8bxLtLQTYQ4fyDcB9OPRhiMcaMTzvBoLlVBIBg?e=ZP2MGm"
       }
     ],
@@ -79,13 +79,6 @@
       {
         "icon": "icon_course_gd.svg",
         "title": "GEOMETRIA DESCRITIVA 11ºANO-presencial",
-        "hasAnualCourse": false,
-        "pdfShort": "",
-        "pdfLong": ""
-      },
-      {
-        "icon": "icon_course_e.svg",
-        "title": "ECONOMIA 11ºANO-presencial",
         "hasAnualCourse": false,
         "pdfShort": "",
         "pdfLong": ""

@@ -117,36 +117,41 @@ const Courses = ({ title, subtitle, courses }) => {
                       />
                     </Button>
                   ) : undefined}
-                  <Button
-                    onClick={() => openFile(course.pdfLong)}
-                    sx={{
-                      textDecoration: "none",
-                      display: "flex",
-                      marginBottom: "10px",
-                      padding: 0,
-                    }}
-                    target={course.pdfLong === "" ? "" : "_blank"}
-                  >
-                    <Typography
-                      variant="body1"
-                      color={index % 2 !== 0 ? "common.black" : "common.white"}
+                  {course.pdfLong !== "" && (
+                    <Button
+                      onClick={() => openFile(course.pdfLong)}
                       sx={{
-                        "&:hover": {
-                          color: index % 2 !== 0 ? "#1893c6" : "common.black",
-                        },
+                        textDecoration: "none",
+                        display: "flex",
+                        marginBottom: "10px",
+                        padding: 0,
                       }}
+                      target={course.pdfLong === "" ? "" : "_blank"}
                     >
-                      Curso Intensivo - Longa Duração
-                    </Typography>
-                    <ArrowForwardIcon
-                      color={index % 2 === 0 ? "info" : "success"}
-                      sx={{
-                        "&:hover": {
-                          color: index % 2 !== 0 ? "#1893c6" : "common.black",
-                        },
-                      }}
-                    />
-                  </Button>
+                      <Typography
+                        variant="body1"
+                        color={
+                          index % 2 !== 0 ? "common.black" : "common.white"
+                        }
+                        sx={{
+                          "&:hover": {
+                            color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                          },
+                        }}
+                      >
+                        Curso Intensivo - Longa Duração
+                      </Typography>
+                      <ArrowForwardIcon
+                        color={index % 2 === 0 ? "info" : "success"}
+                        sx={{
+                          "&:hover": {
+                            color: index % 2 !== 0 ? "#1893c6" : "common.black",
+                          },
+                        }}
+                      />
+                    </Button>
+                  )}
+
                   <Button
                     onClick={() => openFile(course.pdfShort)}
                     style={{
