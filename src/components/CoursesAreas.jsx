@@ -83,7 +83,7 @@ const Courses = ({ title, subtitle, courses }) => {
                   >
                     {course.title}
                   </Typography>
-                  {course.hasAnualCourse ? (
+                  {course.hasAnualCourse && course.pdfAnual !== "" ? (
                     <Button
                       onClick={() => openFile(course.pdfAnual)}
                       sx={{

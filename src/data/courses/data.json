@@ -13,14 +13,14 @@
         "icon": "icon_course_fq.svg",
         "title": "FISICA-QUÍMICA 11ºANO-ONLINE",
         "hasAnualCourse": false,
-        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EW0YMGe2xHBNsiatZvDcytsBEx33QDCONM3y9Z5KEHXt4Q?e=WiErAn",
-        "pdfLong": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EXuorwib8fZAqBc-gn4Ho80B1UgVpeagAEnvremNfBtjrg?e=5bHVnp"
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EZ3bxHGoqk1Isc5vPZBNRw8BnsqMsLh5ARy11i_w0L0lHg?e=gkX0Bj",
+        "pdfLong": ""
       },
       {
         "icon": "icon_course_bg.svg",
         "title": "BIOLOGIA-GEOLOGIA 11ºANO-ONLINE",
         "hasAnualCourse": false,
-        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EYeRmmNMYddBisfxEvPPh6sBDe2MwZclsJFuLQb83F-fag?e=NM6woU",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EWRjfo0xH1pLvixaJI3lO7gB_j3xfe8vBZ1FbKGjCAGuAA?e=a8HUnB",
         "pdfLong": ""
       },
       {
@@ -34,7 +34,7 @@
         "icon": "icon_course_e.svg",
         "title": "ECONOMIA 11ºANO-ONLINE",
         "hasAnualCourse": false,
-        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EQ82ZDnk-yxBltTTZYrUQLABdLQHCG4EXTxLF3h1tsi8Zg?e=LO4noJ",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EQ82ZDnk-yxBltTTZYrUQLABdLQHCG4EXTxLF3h1tsi8Zg?e=8jEeDf",
         "pdfLong": ""
       },
       {
@@ -49,7 +49,7 @@
         "title": "PORTUGUÊS 12ºANO-ONLINE",
         "hasAnualCourse": true,
         "pdfAnual": "",
-        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EYrs7xlqtAlGiJ3gV--1z5YBdG-vOa8krWnmss7k_GFKZA?e=lzlySP",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EYrs7xlqtAlGiJ3gV--1z5YBdG-vOa8krWnmss7k_GFKZA?e=tjC8H1",
         "pdfLong": ""
       },
       {
@@ -57,7 +57,7 @@
         "title": "MATEMÁTICA 12ºANO-ONLINE",
         "hasAnualCourse": true,
         "pdfAnual": "",
-        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/ES1shXQBzAJBj9VMHRZhEwkBbkagv2FModD_gbDv-p7lNQ?e=8ZvNiu",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/ES1shXQBzAJBj9VMHRZhEwkBbkagv2FModD_gbDv-p7lNQ?e=Lr1DgM",
         "pdfLong": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EVN334-R8bxLtLQTYQ4fyDcB9OPRhiMcaMTzvBoLlVBIBg?e=ZP2MGm"
       }
     ],
@@ -80,7 +80,7 @@
         "icon": "icon_course_gd.svg",
         "title": "GEOMETRIA DESCRITIVA 11ºANO-presencial",
         "hasAnualCourse": false,
-        "pdfShort": "",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/EWTN_fTIa4NJnAG3rG7USs0BUOQs8gYtP2Sa2gLljKpcAw?e=uWxzNM",
         "pdfLong": ""
       },
       {
@@ -103,7 +103,7 @@
         "title": "MATEMÁTICA 12ºANO-presencial",
         "hasAnualCourse": true,
         "pdfAnual": "",
-        "pdfShort": "",
+        "pdfShort": "https://asdesaberpt-my.sharepoint.com/:b:/g/personal/geral_asdesaber_pt1/ETYL83sxHuBOkNGQXjt1xCMB9I3J6cjeeaX5E_Mq0j2pIQ?e=8MQpgw",
         "pdfLong": ""
       }
     ]
