@@ -4,7 +4,7 @@ import { Box, Container, MenuItem, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import LinkWithScroll from "../LinkWithScroll";
 import SectionHeader from "../SectionHeader";
-import PricePDF from "../../assets/pdf_prices.pdf";
+import PricePDF from "../../assets/regulamento_23_24.pdf";
 
 const LEVELS = [
   "1º ao 8º ano",
