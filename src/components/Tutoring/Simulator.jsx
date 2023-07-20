@@ -195,7 +195,7 @@ const Simulator = () => {
             target="_blank"
             style={{ color: "#1893c6", fontWeight: 700 }}
           >
-            preçário aqui
+            regulamento aqui
           </Link>{" "}
           ou{" "}
           <LinkWithScroll
