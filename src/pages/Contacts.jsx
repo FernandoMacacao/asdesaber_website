@@ -1,10 +1,9 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import Hero from "../components/Hero";
 import MessageForm from "../components/MessageForm";
 import Footer from "../components/Footer";
 import Data from "../data/contacts/data.json";
-import { useMemo } from "react";
-import { useLoadScript, GoogleMap, MarkerF } from "@react-google-maps/api";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import "../styles/styles.css";
@@ -12,15 +11,6 @@ import { Box, Grid } from "@mui/material";
 import Banner from "../assets/banner_contacts.png";
 
 const Contacts = () => {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-  });
-
-  const center = useMemo(
-    () => ({ lat: 38.77868168090565, lng: -9.096689988635774 }),
-    []
-  );
-
   return (
     <>
       {/* HERO SECTION */}
@@ -36,21 +26,14 @@ const Contacts = () => {
       {/* MAP SECTION */}
       <Box mt={10} display="flex">
         <Container maxWidth="lg">
-          {!isLoaded ? (
-            <Typography variant="body1" color="textPrimary">
-              Loading...
-            </Typography>
-          ) : (
-            <div data-aos="zoom-in">
-              <GoogleMap
-                zoom={19}
-                center={center}
-                mapContainerClassName="map-container"
-              >
-                <MarkerF position={center} />
-              </GoogleMap>
-            </div>
-          )}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12441.385997457266!2d-9.0966952!3d38.7786903!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1931f332022e3b%3A0xc965843d7760e7fc!2zw4FzIERlIFNhYmVyIC0gRXhwbGljYcOnw7VlcyBlIEZvcm1hw6fDo28gTGRhIC0gRXhwbGljYcOnw7VlcyBPbmxpbmUgLQ!5e0!3m2!1spt-PT!2spt!4v1695048413899!5m2!1spt-PT!2spt"
+            width={"100%"}
+            height={"500px"}
+            style={{ border: 0 }}
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+          />
         </Container>
       </Box>
       {/* BANNER */}
